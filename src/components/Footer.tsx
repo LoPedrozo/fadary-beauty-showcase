@@ -10,7 +10,8 @@ const Footer = () => {
         </Link>
 
         <div className="text-[10px] tracking-[0.2em] text-muted-foreground text-center">
-          &copy; {new Date().getFullYear()} FADARY BEAUTY. TODOS OS DIREITOS RESERVADOS.
+          &copy; {new Date().getFullYear()} FADARY BEAUTY. CURADORIA PREMIUM, PRESENÇA E BRILHO
+          NATURAL.
         </div>
 
         <div className="flex gap-8">

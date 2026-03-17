@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Início", path: "/" },
   { label: "Sobre", path: "/sobre" },
-  { label: "Produtos", path: "/produtos" },
+  { label: "Curadoria", path: "/produtos" },
   { label: "Contato", path: "/contato" },
 ];
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             className="hidden md:flex items-center gap-2 text-[10px] border border-primary/30 px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-all duration-400 uppercase tracking-[0.15em]"
           >
             <MessageCircle className="w-4 h-4" />
-            WhatsApp
+            Atendimento
           </a>
 
           {/* Mobile toggle */}
@@ -84,7 +84,7 @@ const Navbar = () => {
                 className="btn-premium text-center text-foreground mt-4"
               >
                 <MessageCircle className="w-4 h-4 inline mr-2" />
-                WhatsApp
+                Atendimento
               </a>
             </div>
           </motion.div>

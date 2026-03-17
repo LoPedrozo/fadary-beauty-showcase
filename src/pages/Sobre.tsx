@@ -4,24 +4,24 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const values = [
   {
-    title: "Pureza",
+    title: "Curadoria",
     description:
-      "Ingredientes criteriosamente selecionados, livres de toxinas. Cada fórmula é uma declaração de respeito à sua pele.",
+      "Cada escolha parte de um olhar apurado para beleza, sensibilidade e sofisticação. A FADARY constrói sua identidade com intenção, não com excesso.",
   },
   {
-    title: "Eficácia",
+    title: "Essência Feminina",
     description:
-      "Ciência avançada combinada com ativos raros para resultados visíveis e duradouros que transformam a rotina de cuidados.",
+      "A marca nasce para celebrar a feminilidade em suas nuances: delicadeza, força, brilho natural e a liberdade de se reconhecer em sua própria presença.",
   },
   {
-    title: "Luxo Consciente",
+    title: "Presença",
     description:
-      "Sofisticação com responsabilidade. Embalagens sustentáveis e processos éticos em cada etapa da produção.",
+      "Mais do que aparência, acreditamos na beleza como estado de espírito. O autocuidado ganha valor quando desperta confiança, calma e autenticidade.",
   },
   {
-    title: "Empoderamento",
+    title: "Experiência",
     description:
-      "Mais do que cosméticos, entregamos confiança. Cada produto é uma ferramenta para você se sentir plena.",
+      "Do primeiro contato ao ritual escolhido, tudo na FADARY busca criar uma experiência envolvente, elegante e acolhedora.",
   },
 ];
 
@@ -41,8 +41,9 @@ const Sobre = () => {
             </span>
             <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Sobre a FADARY</h1>
             <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
-              Nascemos da crença de que a beleza é um ato de poder. Cada formulação é um convite
-              para que você se reconheça na sua versão mais extraordinária.
+              FADARY nasce de uma visão sensível sobre beleza, feminilidade e presença. Uma marca
+              em construção, guiada pelo desejo de transformar o autocuidado em uma experiência
+              sofisticada, leve e cheia de significado.
             </p>
           </ScrollReveal>
         </div>
@@ -62,22 +63,23 @@ const Sobre = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div>
-              <h2 className="text-3xl mb-8 text-foreground">Nossa História</h2>
+              <h2 className="text-3xl mb-8 text-foreground">O Significado de FADARY</h2>
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed font-body">
                 <p>
-                  A FADARY foi fundada com uma visão clara: criar cosméticos que transcendem o
-                  ordinário. Inspirada nos rituais de beleza milenares e impulsionada pela
-                  biotecnologia mais avançada, cada produto carrega a essência da exclusividade.
+                  O nome FADARY carrega uma atmosfera de encanto, brilho e delicadeza. Ele evoca
+                  a mulher que encontra beleza na própria essência e transforma o cotidiano em um
+                  ritual de presença.
                 </p>
                 <p>
-                  Nossa jornada começou com a busca por ingredientes raros — minerais vulcânicos
-                  da Islândia, peptídeos de ouro do Japão, extratos botânicos dos Alpes suíços.
-                  Cada componente é selecionado não apenas pela eficácia, mas pela história que
-                  carrega.
+                  A marca surge menos como um catálogo pronto e mais como uma visão: reunir
+                  referências, escolhas e experiências que traduzam feminilidade com elegância,
+                  autenticidade e sensibilidade.
                 </p>
                 <p>
-                  Hoje, a FADARY é sinônimo de excelência para mulheres que entendem que o
-                  autocuidado é o investimento mais nobre que se pode fazer.
+                  Em vez de afirmar uma história já concluída, a FADARY assume seu momento com
+                  honestidade. Está em construção, refinando sua curadoria e sua voz para criar
+                  uma relação verdadeira com mulheres que valorizam autoestima, estilo e brilho
+                  natural.
                 </p>
               </div>
             </div>
@@ -89,12 +91,12 @@ const Sobre = () => {
       <section className="section-spacing">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Nossa Missão</h2>
+            <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Nossa Visão</h2>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-12" />
             <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed italic font-body">
-              "Empoderar mulheres através da beleza consciente, oferecendo cosméticos premium que
-              celebram a individualidade, respeitam a ciência e elevam a autoestima a um patamar
-              de excelência."
+              "Construir uma marca feminina premium em que cada detalhe expresse elegância,
+              presença e experiência, valorizando a beleza como um reflexo do que a mulher sente
+              e escolhe para si."
             </p>
           </ScrollReveal>
         </div>

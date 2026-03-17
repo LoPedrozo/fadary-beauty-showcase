@@ -7,38 +7,38 @@ import productEyeCream from "@/assets/product-eye-cream.jpg";
 
 const products = [
   {
-    name: "Zenith Black",
-    category: "Regeneração Noturna",
+    name: "Ritual Noturno",
+    category: "Seleção em destaque",
     description:
-      "Infusão de minerais vulcânicos e peptídeos de ouro para restauração celular completa.",
-    price: "R$ 489,00",
+      "Uma referência para momentos de pausa, textura envolvente e brilho sereno ao fim do dia.",
+    availability: "Sob consulta",
     image: zenithBlack,
     featured: true,
   },
   {
-    name: "Lumière Gold Serum",
-    category: "Hidratação & Brilho",
+    name: "Luminosidade Essencial",
+    category: "Em curadoria",
     description:
-      "Sérum com partículas de ouro 24k que ilumina e hidrata profundamente a pele.",
-    price: "R$ 320,00",
+      "Seleções pensadas para realçar viço, leveza e aquela sensação de pele bem cuidada.",
+    availability: "Novidades em breve",
     image: productSerum,
     featured: false,
   },
   {
-    name: "Velvet Cleanser",
-    category: "Limpeza Profunda",
+    name: "Limpeza Delicada",
+    category: "Em curadoria",
     description:
-      "Gel de limpeza com textura aveludada que remove impurezas sem ressecar.",
-    price: "R$ 185,00",
+      "Referências para um início de ritual elegante, com cuidado suave e sensação de frescor.",
+    availability: "Sob consulta",
     image: productCleanser,
     featured: false,
   },
   {
-    name: "Onyx Eye Cream",
-    category: "Tratamento Intensivo",
+    name: "Cuidado para o Olhar",
+    category: "Seleção especial",
     description:
-      "Creme para área dos olhos com tecnologia anti-aging avançada e extrato de ônix.",
-    price: "R$ 290,00",
+      "Uma inspiração para escolhas que valorizam expressão, delicadeza e presença em cada detalhe.",
+    availability: "Em atualização",
     image: productEyeCream,
     featured: false,
   },
@@ -52,52 +52,53 @@ const Produtos = () => {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
-              Coleção Premium
+              Curadoria FADARY
             </span>
-            <h1 className="text-4xl md:text-7xl mb-8 text-foreground">A Coleção</h1>
+            <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Seleção FADARY</h1>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
             <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
-              Cada produto da FADARY é uma obra de arte formulada com os ingredientes mais raros
-              do mundo. Descubra a coleção que redefine o luxo na beleza.
+              Esta página reúne referências que traduzem a atmosfera da FADARY. Nossa curadoria
+              está em construção, com escolhas guiadas por feminilidade, brilho natural e uma
+              experiência de beleza sofisticada.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Featured - Zenith Black */}
+      {/* Featured Selection */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="bg-surface border border-border/20 p-8 md:p-20 flex flex-col md:flex-row gap-16 items-center">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
-                  Flagship Product
+                  Curadoria em destaque
                 </span>
-                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">Zenith Black</h2>
+                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">{products[0].name}</h2>
                 <p className="text-muted-foreground mb-4 font-light leading-relaxed font-body">
                   {products[0].description}
                 </p>
                 <p className="text-xs text-muted-foreground mb-8 uppercase tracking-wider font-body">
                   {products[0].category}
                 </p>
-                <div className="text-2xl mb-10 font-light italic text-foreground font-body">
-                  {products[0].price}
+                <div className="text-xl md:text-2xl mb-10 font-light italic text-foreground font-body">
+                  {products[0].availability}
                 </div>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o Zenith Black"
+                  href="https://wa.me/5511999999999?text=Olá! Quero conhecer a seleção em destaque da FADARY."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-premium inline-flex items-center gap-2 text-foreground"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Entrar em contato para comprar
+                  Falar sobre a curadoria
                 </a>
               </div>
               <div className="flex-1 order-1 md:order-2">
                 <div className="aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-8 shadow-2xl border border-border/10">
                   <img
                     src={zenithBlack}
-                    alt="Zenith Black"
+                    alt="Seleção em destaque da curadoria FADARY"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -112,7 +113,7 @@ const Produtos = () => {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-3xl mb-4 text-foreground">Outros Produtos</h2>
+              <h2 className="text-3xl mb-4 text-foreground">Outras Referências</h2>
               <div className="w-12 h-[1px] bg-primary mx-auto" />
             </div>
           </ScrollReveal>
@@ -136,14 +137,14 @@ const Produtos = () => {
                     {product.description}
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-primary font-body">{product.price}</span>
+                    <span className="text-primary font-body">{product.availability}</span>
                     <a
-                      href={`https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o ${product.name}`}
+                      href={`https://wa.me/5511999999999?text=Olá! Quero saber mais sobre a referência ${product.name} da curadoria FADARY.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold font-body"
                     >
-                      Inquirir
+                      Consultar
                     </a>
                   </div>
                 </div>
