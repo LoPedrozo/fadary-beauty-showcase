@@ -7,15 +7,15 @@ import zenithBlack from "@/assets/zenith-black.jpg";
 
 const testimonials = [
   {
-    text: "FADARY representa a magia que vive em cada mulher: o poder de transformar o simples em extraordinário, o natural em brilho e o cotidiano em encanto.",
-    author: "Manifesto",
+    text: "Autocuidado com leveza, presença e beleza natural.",
+    author: "Autocuidado",
   },
   {
-    text: "Seu brilho não vem apenas do que se vê, mas do que você sente. Quando a mulher se reconhece com leveza e confiança, a beleza acontece por inteiro.",
-    author: "Brilho Interior",
+    text: "Escolhas pensadas para acompanhar a rotina feminina com delicadeza.",
+    author: "Rotina",
   },
   {
-    text: "Nossa curadoria nasce para acolher presença, feminilidade e autenticidade em uma experiência de beleza sofisticada, sensível e em constante construção.",
+    text: "Uma curadoria feita para valorizar o que é simples, bonito e real.",
     author: "Curadoria",
   },
 ];
@@ -41,15 +41,14 @@ const Index = () => {
           className="relative z-20 text-center px-6"
         >
           <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
-            Magia, Presença e Brilho
+            Beleza, Cuidado e Presença
           </span>
           <h1 className="text-5xl md:text-8xl mb-8 leading-tight font-display text-foreground">
             FADARY
           </h1>
           <p className="max-w-xl mx-auto text-sm md:text-base text-muted-foreground font-light leading-relaxed mb-12 font-body">
-            FADARY representa a magia que vive em cada mulher. Entre brilho natural,
-            feminilidade e sofisticação, construímos uma experiência de beleza que transforma o
-            cotidiano em encanto.
+            FADARY valoriza a beleza feminina com leveza, elegância e cuidado. Uma marca pensada
+            para acompanhar a rotina de autocuidado com bem-estar, feminilidade e beleza natural.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link to="/produtos" className="btn-premium text-foreground">
@@ -85,18 +84,18 @@ const Index = () => {
               <h2 className="text-3xl mb-8 text-foreground">Nossa Essência</h2>
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed font-body">
                 <p>
-                  FADARY nasce para celebrar a beleza como expressão de presença. Mais do que
-                  aparência, enxergamos o autocuidado como um ritual íntimo, elegante e cheio de
-                  significado.
+                  A FADARY acredita em uma beleza que faz parte da rotina da mulher com leveza e
+                  intenção. Para nós, autocuidado é um gesto diário de bem-estar, presença e
+                  conexão com a própria feminilidade.
                 </p>
                 <p>
-                  Estamos construindo uma curadoria guiada por sensibilidade, autenticidade e
-                  intenção. Cada escolha busca traduzir feminilidade, leveza e um brilho natural
-                  que começa no que se sente.
+                  Nossa curadoria é pensada para acompanhar momentos simples e especiais, com
+                  escolhas que unem delicadeza, cuidado e beleza natural. Tudo de forma próxima,
+                  elegante e fácil de viver no dia a dia.
                 </p>
               </div>
               <div className="mt-12 grid grid-cols-3 gap-8 border-t border-border/30 pt-8">
-                {["Presença", "Ritual", "Autenticidade"].map((value, i) => (
+                {["Autocuidado", "Presença", "Delicadeza"].map((value, i) => (
                   <div key={value}>
                     <span className="block text-primary text-xl mb-2 italic font-display">
                       0{i + 1}.
@@ -123,13 +122,12 @@ const Index = () => {
                 </span>
                 <h2 className="text-4xl md:text-6xl mb-6 text-foreground">Seleção em Destaque</h2>
                 <p className="text-muted-foreground mb-8 font-light leading-relaxed font-body">
-                  Uma seleção inspirada em rituais de beleza que unem sofisticação, textura e
-                  intenção. Cada referência entra na FADARY como parte de uma experiência
-                  feminina, acolhedora e premium, escolhida com olhar sensível para o que
-                  realmente encanta.
+                  Uma seleção pensada para acompanhar a rotina de beleza com leveza, cuidado e
+                  feminilidade. Cada referência é escolhida para inspirar momentos de autocuidado
+                  e tornar o dia a dia mais bonito e agradável.
                 </p>
                 <div className="text-lg md:text-2xl mb-10 font-light italic text-foreground font-body">
-                  Catálogo em construção, com sugestões e disponibilidade sob consulta.
+                  Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
                 <a
                   href="https://wa.me/5511999999999?text=Olá! Quero conhecer a curadoria da FADARY."
@@ -186,13 +184,11 @@ const Index = () => {
       <section className="section-spacing">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-5xl mb-8 text-foreground">
-              Entre no Universo FADARY
-            </h2>
+            <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Conheça a FADARY</h2>
             <p className="text-muted-foreground mb-12 font-light leading-relaxed font-body">
-              Se você se conecta com uma beleza mais sensível, sofisticada e autêntica, fale
-              conosco. A FADARY está em construção, e cada novo capítulo começa com presença,
-              escuta e brilho natural.
+              Estamos construindo uma marca pensada para acompanhar sua rotina de autocuidado com
+              leveza, beleza natural e um olhar acolhedor para o bem-estar feminino. Fale conosco
+              e conheça mais de perto a essência da FADARY.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a

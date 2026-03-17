@@ -10,7 +10,7 @@ const Footer = () => {
         </Link>
 
         <div className="text-[10px] tracking-[0.2em] text-muted-foreground text-center">
-          &copy; {new Date().getFullYear()} FADARY BEAUTY. CURADORIA PREMIUM, PRESENÇA E BRILHO
+          &copy; {new Date().getFullYear()} FADARY BEAUTY. ELEGÂNCIA, AUTOCUIDADO E BELEZA
           NATURAL.
         </div>
 

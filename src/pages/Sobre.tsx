@@ -6,22 +6,22 @@ const values = [
   {
     title: "Curadoria",
     description:
-      "Cada escolha parte de um olhar apurado para beleza, sensibilidade e sofisticação. A FADARY constrói sua identidade com intenção, não com excesso.",
+      "Escolhas feitas com sensibilidade para acompanhar a rotina de beleza de forma leve, elegante e natural.",
   },
   {
     title: "Essência Feminina",
     description:
-      "A marca nasce para celebrar a feminilidade em suas nuances: delicadeza, força, brilho natural e a liberdade de se reconhecer em sua própria presença.",
+      "Uma forma de valorizar feminilidade, delicadeza e beleza real sem excessos.",
   },
   {
     title: "Presença",
     description:
-      "Mais do que aparência, acreditamos na beleza como estado de espírito. O autocuidado ganha valor quando desperta confiança, calma e autenticidade.",
+      "Cuidar de si também é estar presente para o que faz bem, com mais calma, confiança e verdade.",
   },
   {
-    title: "Experiência",
+    title: "Autocuidado",
     description:
-      "Do primeiro contato ao ritual escolhido, tudo na FADARY busca criar uma experiência envolvente, elegante e acolhedora.",
+      "Pequenos gestos de cuidado que transformam a rotina em um momento de bem-estar.",
   },
 ];
 
@@ -41,9 +41,9 @@ const Sobre = () => {
             </span>
             <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Sobre a FADARY</h1>
             <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
-              FADARY nasce de uma visão sensível sobre beleza, feminilidade e presença. Uma marca
-              em construção, guiada pelo desejo de transformar o autocuidado em uma experiência
-              sofisticada, leve e cheia de significado.
+              FADARY nasce de um olhar delicado sobre beleza, feminilidade e autocuidado. Uma
+              marca em construção, pensada para acompanhar a mulher com leveza, presença e
+              bem-estar.
             </p>
           </ScrollReveal>
         </div>
@@ -66,20 +66,18 @@ const Sobre = () => {
               <h2 className="text-3xl mb-8 text-foreground">O Significado de FADARY</h2>
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed font-body">
                 <p>
-                  O nome FADARY carrega uma atmosfera de encanto, brilho e delicadeza. Ele evoca
-                  a mulher que encontra beleza na própria essência e transforma o cotidiano em um
-                  ritual de presença.
+                  O nome FADARY traduz delicadeza, feminilidade e beleza natural. Ele inspira uma
+                  marca que valoriza o cuidado com a mulher de forma leve, elegante e próxima.
                 </p>
                 <p>
-                  A marca surge menos como um catálogo pronto e mais como uma visão: reunir
-                  referências, escolhas e experiências que traduzam feminilidade com elegância,
-                  autenticidade e sensibilidade.
+                  A FADARY nasce como uma curadoria em construção, reunindo referências e escolhas
+                  que fazem sentido para a rotina de autocuidado. Tudo com sensibilidade, clareza
+                  e um olhar atento aos pequenos detalhes.
                 </p>
                 <p>
-                  Em vez de afirmar uma história já concluída, a FADARY assume seu momento com
-                  honestidade. Está em construção, refinando sua curadoria e sua voz para criar
-                  uma relação verdadeira com mulheres que valorizam autoestima, estilo e brilho
-                  natural.
+                  Mais do que apresentar respostas prontas, a marca cresce com verdade, escuta e
+                  intenção. É um caminho construído para mulheres que valorizam bem-estar,
+                  presença e uma beleza real.
                 </p>
               </div>
             </div>
@@ -94,9 +92,8 @@ const Sobre = () => {
             <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Nossa Visão</h2>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-12" />
             <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed italic font-body">
-              "Construir uma marca feminina premium em que cada detalhe expresse elegância,
-              presença e experiência, valorizando a beleza como um reflexo do que a mulher sente
-              e escolhe para si."
+              "Construir uma marca feminina de beleza e autocuidado em que cada detalhe transmita
+              delicadeza, presença e bem-estar, valorizando a beleza natural no dia a dia."
             </p>
           </ScrollReveal>
         </div>
