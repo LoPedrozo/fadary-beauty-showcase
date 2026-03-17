@@ -7,16 +7,16 @@ import zenithBlack from "@/assets/zenith-black.jpg";
 
 const testimonials = [
   {
-    text: "A experiência com a FADARY mudou minha percepção de autocuidado. Não é sobre esconder imperfeições, é sobre celebrar a pele que habito.",
-    author: "Helena Cavalcante",
+    text: "FADARY representa a magia que vive em cada mulher: o poder de transformar o simples em extraordinário, o natural em brilho e o cotidiano em encanto.",
+    author: "Manifesto",
   },
   {
-    text: "Zenith Black transformou minha rotina noturna. Acordo com a pele radiante e renovada, como se o tempo trabalhasse a meu favor.",
-    author: "Marina Duarte",
+    text: "Seu brilho não vem apenas do que se vê, mas do que você sente. Quando a mulher se reconhece com leveza e confiança, a beleza acontece por inteiro.",
+    author: "Brilho Interior",
   },
   {
-    text: "Sofisticação em cada detalhe. Desde a embalagem até o resultado, a FADARY entrega uma experiência verdadeiramente premium.",
-    author: "Camila Ferreira",
+    text: "Nossa curadoria nasce para acolher presença, feminilidade e autenticidade em uma experiência de beleza sofisticada, sensível e em constante construção.",
+    author: "Curadoria",
   },
 ];
 
@@ -29,7 +29,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background z-10" />
           <img
             src={heroBg}
-            alt="FADARY Beauty"
+            alt="Atmosfera elegante da FADARY"
             className="w-full h-full object-cover opacity-50"
           />
         </div>
@@ -41,24 +41,25 @@ const Index = () => {
           className="relative z-20 text-center px-6"
         >
           <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
-            The Essence of Rarity
+            Magia, Presença e Brilho
           </span>
           <h1 className="text-5xl md:text-8xl mb-8 leading-tight font-display text-foreground">
             FADARY
           </h1>
           <p className="max-w-xl mx-auto text-sm md:text-base text-muted-foreground font-light leading-relaxed mb-12 font-body">
-            Não é apenas beleza. É a manifestação física da sua confiança. Criamos fórmulas que
-            respeitam a sua história e elevam o seu futuro.
+            FADARY representa a magia que vive em cada mulher. Entre brilho natural,
+            feminilidade e sofisticação, construímos uma experiência de beleza que transforma o
+            cotidiano em encanto.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link to="/produtos" className="btn-premium text-foreground">
-              Explorar Coleção
+              Explorar Curadoria
             </Link>
             <Link
               to="/contato"
               className="px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body"
             >
-              Ver Catálogo <ArrowRight className="w-4 h-4" />
+              Falar com a FADARY <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </motion.div>
@@ -72,7 +73,7 @@ const Index = () => {
               <div className="aspect-[4/5] overflow-hidden border border-border/30">
                 <img
                   src={heroBg}
-                  alt="Brand Story"
+                  alt="Essência da marca FADARY"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 />
               </div>
@@ -81,20 +82,21 @@ const Index = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div>
-              <h2 className="text-3xl mb-8 text-foreground">Nossa Filosofia</h2>
+              <h2 className="text-3xl mb-8 text-foreground">Nossa Essência</h2>
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed font-body">
                 <p>
-                  A FADARY nasceu da intersecção entre a ciência avançada e o ritual ancestral.
-                  Acreditamos que a beleza premium não deve ser apenas vista, mas sentida através
-                  da textura, do aroma e do resultado impecável.
+                  FADARY nasce para celebrar a beleza como expressão de presença. Mais do que
+                  aparência, enxergamos o autocuidado como um ritual íntimo, elegante e cheio de
+                  significado.
                 </p>
                 <p>
-                  Nossa missão é fornecer ferramentas de expressão para mulheres que não aceitam o
-                  comum. Cada frasco é uma promessa de excelência.
+                  Estamos construindo uma curadoria guiada por sensibilidade, autenticidade e
+                  intenção. Cada escolha busca traduzir feminilidade, leveza e um brilho natural
+                  que começa no que se sente.
                 </p>
               </div>
               <div className="mt-12 grid grid-cols-3 gap-8 border-t border-border/30 pt-8">
-                {["Pureza", "Eficácia", "Luxo"].map((value, i) => (
+                {["Presença", "Ritual", "Autenticidade"].map((value, i) => (
                   <div key={value}>
                     <span className="block text-primary text-xl mb-2 italic font-display">
                       0{i + 1}.
@@ -117,23 +119,25 @@ const Index = () => {
             <div className="bg-surface border border-border/20 p-8 md:p-20 flex flex-col md:flex-row gap-16 items-center">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
-                  Flagship Product
+                  Curadoria FADARY
                 </span>
-                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">Zenith Black</h2>
+                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">Seleção em Destaque</h2>
                 <p className="text-muted-foreground mb-8 font-light leading-relaxed font-body">
-                  O ápice da regeneração noturna. Uma infusão de minerais vulcânicos e peptídeos
-                  de ouro que restaura a luminosidade da pele enquanto você transcende.
+                  Uma seleção inspirada em rituais de beleza que unem sofisticação, textura e
+                  intenção. Cada referência entra na FADARY como parte de uma experiência
+                  feminina, acolhedora e premium, escolhida com olhar sensível para o que
+                  realmente encanta.
                 </p>
-                <div className="text-2xl mb-10 font-light italic text-foreground font-body">
-                  R$ 489,00
+                <div className="text-lg md:text-2xl mb-10 font-light italic text-foreground font-body">
+                  Catálogo em construção, com sugestões e disponibilidade sob consulta.
                 </div>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Gostaria de adquirir o Zenith Black"
+                  href="https://wa.me/5511999999999?text=Olá! Quero conhecer a curadoria da FADARY."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-premium inline-block text-foreground"
                 >
-                  Adquirir via Consultora
+                  Conhecer a Seleção
                 </a>
               </div>
               <div className="flex-1 order-1 md:order-2 relative">
@@ -141,7 +145,7 @@ const Index = () => {
                   <div className="w-full h-full border border-primary/20 flex items-center justify-center relative overflow-hidden">
                     <img
                       src={zenithBlack}
-                      alt="Zenith Black"
+                      alt="Seleção em destaque da curadoria FADARY"
                       className="w-3/4 object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
@@ -183,11 +187,12 @@ const Index = () => {
         <ScrollReveal>
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-5xl mb-8 text-foreground">
-              Eleve Sua Rotina de Beleza
+              Entre no Universo FADARY
             </h2>
             <p className="text-muted-foreground mb-12 font-light leading-relaxed font-body">
-              Entre em contato com nossas consultoras para uma experiência personalizada. Sua
-              jornada de beleza premium começa com uma conversa.
+              Se você se conecta com uma beleza mais sensível, sofisticada e autêntica, fale
+              conosco. A FADARY está em construção, e cada novo capítulo começa com presença,
+              escuta e brilho natural.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
@@ -196,7 +201,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="btn-premium text-foreground"
               >
-                Fale pelo WhatsApp
+                Falar com a FADARY
               </a>
               <a
                 href="https://instagram.com/fadary.beauty"
@@ -204,7 +209,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body border border-border/30"
               >
-                Siga no Instagram
+                Acompanhar no Instagram
               </a>
             </div>
           </div>
