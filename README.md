@@ -28,10 +28,12 @@ A proposta foi simular um cenário próximo ao de um cliente real, criando uma p
 
 Pelo que foi utilizado no projeto, as principais tecnologias/ferramentas foram:
 
-- **HTML**
-- **TypeScript**
-- **React**
-- **Vite**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Framer Motion
 
 ## Funcionalidades atuais
 
