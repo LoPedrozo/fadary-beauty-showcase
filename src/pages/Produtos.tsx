@@ -129,11 +129,6 @@ const Produtos = () => {
                       alt={product.name}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
-                    <img
-                      src={fadaryIcon}
-                      alt=""
-                      className="absolute bottom-3 right-3 h-6 w-6 object-contain opacity-50 group-hover:opacity-70 transition-opacity duration-700"
-                    />
                   </div>
                   <h3 className="text-lg mb-2 text-foreground">{product.name}</h3>
                   <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider font-body">
