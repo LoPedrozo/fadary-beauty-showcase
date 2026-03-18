@@ -52,13 +52,6 @@ O projeto ainda **não está finalizado** e segue em fase de refinamento.
 
 Atualmente, ele já representa bem a proposta visual e técnica que eu queria construir, mas ainda receberá ajustes e melhorias antes de ser considerado uma versão final.
 
-## Publicação
-
-O deploy do projeto será realizado futuramente, com o objetivo de disponibilizar acesso por link para visualização em qualquer dispositivo.
-
-<!-- Quando publicar, substitua a linha abaixo -->
-**Link do projeto:** em breve
-
 ## Observações
 
 - Este projeto foi desenvolvido para fins de estudo e portfólio
