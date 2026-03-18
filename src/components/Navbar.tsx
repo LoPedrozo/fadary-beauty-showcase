@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createWhatsAppLink, whatsappMessages } from "@/lib/contact";
+import fadaryLogo from "@/assets/fadary-logo.png";
 
 const navLinks = [
   { label: "Início", path: "/" },
@@ -18,8 +19,9 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 border-b border-border/30 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold tracking-[0.3em] gold-gradient-text font-display">
-          FADARY
+        <Link to="/" className="flex items-center gap-3">
+          <img src={fadaryLogo} alt="FADARY" className="h-10 w-10 object-contain" />
+          <span className="text-2xl font-bold tracking-[0.3em] gold-gradient-text font-display">FADARY</span>
         </Link>
 
         {/* Desktop Nav */}
