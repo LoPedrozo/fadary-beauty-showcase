@@ -7,8 +7,9 @@ const Footer = () => {
   return (
     <footer className="bg-background py-20 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-        <Link to="/" className="text-3xl font-bold tracking-[0.4em] gold-gradient-text font-display">
-          FADARY
+        <Link to="/" className="flex flex-col items-center gap-3">
+          <img src={fadaryLogo} alt="FADARY" className="h-14 w-14 object-contain" />
+          <span className="text-3xl font-bold tracking-[0.4em] gold-gradient-text font-display">FADARY</span>
         </Link>
 
         <div className="text-[10px] tracking-[0.2em] text-muted-foreground text-center">
