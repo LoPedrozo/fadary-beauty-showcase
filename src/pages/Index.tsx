@@ -134,8 +134,8 @@ const Index = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div>
-              <h2 className="text-3xl mb-8 text-foreground">Nossa Essência</h2>
-              <div className="space-y-6 text-muted-foreground font-light leading-relaxed font-body">
+              <h2 className="mb-8 text-3xl text-foreground md:text-[2.2rem]">Nossa Essência</h2>
+              <div className="space-y-6 text-muted-foreground font-light leading-[1.82] font-body">
                 <p>
                   A FADARY acredita em uma beleza que faz parte da rotina da mulher com leveza e
                   intenção. Para nós, autocuidado é um gesto diário de bem-estar, presença e
@@ -168,18 +168,18 @@ const Index = () => {
       <section className="section-spacing bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
+            <div className="panel-premium flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
                   Curadoria FADARY
                 </span>
-                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">Seleção em Destaque</h2>
-                <p className="text-muted-foreground mb-8 font-light leading-relaxed font-body">
+                <h2 className="mb-6 text-4xl text-foreground md:text-6xl">Seleção em Destaque</h2>
+                <p className="mb-8 text-muted-foreground font-light leading-[1.82] font-body">
                   Uma seleção pensada para acompanhar a rotina de beleza com leveza, cuidado e
                   feminilidade. Cada referência é escolhida para inspirar momentos de autocuidado
                   e tornar o dia a dia mais bonito e agradável.
                 </p>
-                <div className="text-lg md:text-2xl mb-10 font-light italic text-foreground font-body">
+                <div className="mb-10 text-lg font-light italic text-foreground font-body md:text-2xl">
                   Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
                 <Link
@@ -239,8 +239,8 @@ const Index = () => {
       <section className="section-spacing">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto px-5 text-center sm:px-6">
-            <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Conheça a FADARY</h2>
-            <p className="text-muted-foreground mb-12 font-light leading-relaxed font-body">
+            <h2 className="mb-8 text-3xl text-foreground md:text-5xl">Conheça a FADARY</h2>
+            <p className="mb-12 text-muted-foreground font-light leading-[1.82] font-body">
               Estamos construindo uma marca pensada para acompanhar sua rotina de autocuidado com
               leveza, beleza natural e um olhar acolhedor para o bem-estar feminino. Fale conosco
               e conheça mais de perto a essência da FADARY.

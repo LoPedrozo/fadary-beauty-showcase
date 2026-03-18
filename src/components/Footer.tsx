@@ -7,10 +7,10 @@ import fadaryLogo from "@/assets/fadary-logo-nav.png";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/30 py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-10 px-5 sm:px-6 md:flex-row md:gap-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-8">
         <Link
           to={APP_PATHS.home}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2 md:justify-self-start"
           aria-label="Página inicial da FADARY"
         >
           <img
@@ -24,12 +24,12 @@ const Footer = () => {
           />
         </Link>
 
-        <div className="max-w-sm text-center text-[9px] leading-6 tracking-[0.18em] text-muted-foreground sm:text-[10px] sm:tracking-[0.2em]">
+        <div className="mx-auto max-w-sm text-center text-[9px] leading-6 tracking-[0.18em] text-muted-foreground sm:text-[10px] sm:tracking-[0.2em] md:justify-self-center">
           &copy; {new Date().getFullYear()} FADARY BEAUTY. ELEGÂNCIA, AUTOCUIDADO E BELEZA
           NATURAL.
         </div>
 
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 md:justify-self-end">
           <a
             href={CONTACTS.instagramUrl}
             target="_blank"

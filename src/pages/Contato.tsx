@@ -8,10 +8,10 @@ const Contato = () => {
       <section className="section-spacing bg-surface-elevated">
         <div className="max-w-5xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="mx-auto max-w-4xl border border-border/20 bg-surface px-5 py-10 text-center sm:px-8 sm:py-12 md:px-14 md:py-16">
+            <div className="panel-premium mx-auto max-w-4xl border border-border/20 bg-surface px-5 py-10 text-center sm:px-8 sm:py-12 md:px-14 md:py-16">
               <h1 className="text-3xl text-foreground sm:text-4xl md:text-6xl">Fale com a Fadary</h1>
               <div className="w-12 h-[1px] bg-primary mx-auto my-8" />
-              <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
+              <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82] font-body">
                 Escolha o canal que fizer mais sentido para você. Estamos disponíveis para tirar
                 dúvidas, apresentar a curadoria e acompanhar seu atendimento com proximidade.
               </p>

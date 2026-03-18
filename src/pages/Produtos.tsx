@@ -52,7 +52,7 @@ const Produtos = () => {
             </span>
             <h1 className="mb-8 text-3xl text-foreground sm:text-4xl md:text-7xl">Seleção FADARY</h1>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
+            <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82] font-body">
               Uma seleção pensada para acompanhar a rotina de beleza e autocuidado da mulher. Aqui
               você encontra produtos e escolhas que valorizam hidratação, cuidado diário,
               bem-estar e beleza natural.
@@ -64,13 +64,13 @@ const Produtos = () => {
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
+            <div className="panel-premium flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
                   Seleção em destaque
                 </span>
-                <h2 className="text-4xl md:text-6xl mb-6 text-foreground">{products[0].name}</h2>
-                <p className="text-muted-foreground mb-4 font-light leading-relaxed font-body">
+                <h2 className="mb-6 text-4xl text-foreground md:text-6xl">{products[0].name}</h2>
+                <p className="mb-4 text-muted-foreground font-light leading-[1.82] font-body">
                   Um cuidado pensado para o fim do dia, quando a pele pede conforto, hidratação e
                   uma pausa tranquila na rotina. A curadoria da FADARY reúne escolhas que ajudam a
                   transformar esse momento em um gesto simples de autocuidado.
@@ -78,7 +78,7 @@ const Produtos = () => {
                 <p className="text-xs text-muted-foreground mb-8 uppercase tracking-wider font-body">
                   {products[0].category}
                 </p>
-                <div className="text-xl md:text-2xl mb-10 font-light italic text-foreground font-body">
+                <div className="mb-10 text-xl font-light italic text-foreground font-body md:text-2xl">
                   Disponibilidade sob consulta, com novas escolhas chegando em breve.
                 </div>
                 <a
@@ -136,7 +136,7 @@ const Produtos = () => {
                   <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider font-body">
                     {product.category}
                   </p>
-                  <p className="text-sm text-muted-foreground mb-4 font-light font-body">
+                  <p className="mb-4 flex-1 text-sm text-muted-foreground font-light leading-[1.72] font-body">
                     {product.description}
                   </p>
                   <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">

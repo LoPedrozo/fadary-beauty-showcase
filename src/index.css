@@ -50,6 +50,9 @@
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   a, button {
@@ -61,6 +64,15 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cinzel', serif;
     letter-spacing: 0.1em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    display: block;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -85,10 +97,11 @@
     @apply inline-flex min-h-[3rem] items-center justify-center gap-2 border border-primary px-8 py-3 uppercase text-xs tracking-[0.2em] relative overflow-hidden;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    line-height: 1;
     transition-property: color, background-color, border-color, transform, box-shadow, filter;
     transition-duration: 260ms;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     will-change: transform;
   }
 
@@ -146,6 +159,10 @@
   }
 
   .subtle-link-cta {
+    position: relative;
+    transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
   }
 
@@ -153,14 +170,30 @@
     transform: translateY(0) scale(0.985);
   }
 
+  .subtle-link-cta:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(212, 175, 97, 0.55), 0 0 0 5px rgba(212, 175, 97, 0.1);
+  }
+
+  .panel-premium {
+    box-shadow: 0 28px 72px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .card-premium {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
   .product-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
   }
 
   .product-card-visual {
     transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), border-color 280ms cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.03);
     will-change: transform;
   }
 
@@ -171,12 +204,12 @@
 
   .contact-card {
     transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1), border-color 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 260ms cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.03);
     will-change: transform;
   }
 
   .contact-card-primary {
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .contact-card-icon {
@@ -187,9 +220,9 @@
   @media (hover: hover) and (pointer: fine) {
     .btn-premium:hover {
       @apply bg-primary text-primary-foreground;
-      transform: translateY(-2px) scale(1.03);
+      transform: translateY(-2px) scale(1.02);
       box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(212, 175, 97, 0.14);
-      filter: brightness(1.03);
+      filter: brightness(1.02);
     }
 
     .btn-premium:hover::after {
@@ -210,22 +243,22 @@
     }
 
     .product-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-4px);
     }
 
     .product-card:hover .product-card-visual {
       border-color: rgba(212, 175, 97, 0.28);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.16);
     }
 
     .product-card:hover .product-card-media {
-      transform: scale(1.045);
+      transform: scale(1.035);
     }
 
     .contact-card:hover {
-      transform: translateY(-4px) scale(1.01);
+      transform: translateY(-3px) scale(1.005);
       border-color: rgba(212, 175, 97, 0.36);
-      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.2);
     }
 
     .contact-card:hover .contact-card-icon {
@@ -233,7 +266,7 @@
     }
 
     .contact-card-primary:hover {
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
     }
   }
 }
