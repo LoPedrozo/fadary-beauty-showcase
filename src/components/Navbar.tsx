@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createWhatsAppLink, whatsappMessages } from "@/lib/contact";
+import fadaryLogo from "@/assets/fadary-logo.png";
 
 const navLinks = [
   { label: "Início", path: "/" },
