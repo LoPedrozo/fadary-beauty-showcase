@@ -14,7 +14,6 @@ const products = [
       "Um cuidado pensado para a rotina da noite, ajudando a manter a pele hidratada, confortável e com aparência descansada.",
     availability: "Sob consulta",
     image: zenithBlack,
-    featured: true,
   },
   {
     name: "Serum de Luminosidade",
@@ -23,7 +22,6 @@ const products = [
       "Ideal para quem busca leveza, hidratação e um toque de luminosidade na rotina diária de cuidados com a pele.",
     availability: "Novidades em breve",
     image: productSerum,
-    featured: false,
   },
   {
     name: "Gel de Limpeza Suave",
@@ -32,7 +30,6 @@ const products = [
       "Uma escolha para limpar a pele com delicadeza, removendo impurezas sem abrir mão de conforto e frescor.",
     availability: "Sob consulta",
     image: productCleanser,
-    featured: false,
   },
   {
     name: "Cuidado para os Olhos",
@@ -41,7 +38,6 @@ const products = [
       "Perfeito para complementar a rotina com atenção extra a uma área delicada, trazendo leveza ao cuidado diário.",
     availability: "Em atualização",
     image: productEyeCream,
-    featured: false,
   },
 ];
 
@@ -101,6 +97,9 @@ const Produtos = () => {
                     src={zenithBlack}
                     alt="Cuidado noturno da curadoria FADARY"
                     className="w-full h-full object-contain"
+                    width={1024}
+                    height={1024}
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -127,6 +126,10 @@ const Produtos = () => {
                       src={product.image}
                       alt={product.name}
                       className="product-card-media w-full h-full object-cover grayscale group-hover:grayscale-0"
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="text-lg mb-2 text-foreground">{product.name}</h3>

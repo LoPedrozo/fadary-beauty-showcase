@@ -3,14 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createWhatsAppLink, whatsappMessages } from "@/lib/contact";
+import { APP_PATHS, NAV_LINKS } from "@/config/navigation";
 import fadaryIcon from "@/assets/fadary-icon.png";
-
-const navLinks = [
-  { label: "Início", path: "/" },
-  { label: "Sobre", path: "/sobre" },
-  { label: "Curadoria", path: "/produtos" },
-  { label: "Contato", path: "/contato" },
-];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +19,21 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 border-b border-border/30 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" aria-label="Página inicial da FADARY">
-          <img src={fadaryIcon} alt="FADARY" className="h-[84px] w-[84px] object-contain" />
+        <Link to={APP_PATHS.home} className="flex items-center gap-3" aria-label="Página inicial da FADARY">
+          <img
+            src={fadaryIcon}
+            alt="FADARY"
+            className="h-[84px] w-[84px] object-contain"
+            width={320}
+            height={320}
+            decoding="async"
+          />
           <span className="text-xl font-bold tracking-[0.3em] gold-gradient-text font-display">FADARY</span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.2em]">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
               key={link.path}
               to={link.path}
@@ -79,7 +80,7 @@ const Navbar = () => {
             className="md:hidden bg-background border-t border-border/30 overflow-hidden"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}

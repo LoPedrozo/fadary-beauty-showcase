@@ -2,8 +2,10 @@ import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
+import { APP_PATHS } from "@/config/navigation";
 import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 import zenithBlack from "@/assets/zenith-black.jpg";
 
 const testimonials = [
@@ -51,11 +53,18 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background z-10" />
-          <img
-            src={heroBg}
-            alt="Atmosfera elegante da FADARY"
-            className="w-full h-full object-cover opacity-50"
-          />
+          <picture className="block h-full w-full">
+            <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+            <img
+              src={heroBg}
+              alt="Atmosfera elegante da FADARY"
+              className="w-full h-full object-cover opacity-50"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
 
         <motion.div
@@ -82,11 +91,11 @@ const Index = () => {
             </p>
           </motion.div>
           <motion.div variants={heroItem} className="mt-12 flex flex-col md:flex-row gap-6 justify-center md:mt-14">
-            <Link to="/produtos" className="btn-premium text-foreground">
+            <Link to={APP_PATHS.products} className="btn-premium text-foreground">
               Explorar Curadoria
             </Link>
             <Link
-              to="/contato"
+              to={APP_PATHS.contact}
               className="subtle-link-cta px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body"
             >
               Falar com a FADARY <ArrowRight className="w-4 h-4" />
@@ -105,6 +114,10 @@ const Index = () => {
                   src={heroBg}
                   alt="Essência da marca FADARY"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 border border-primary/30 z-[-1]" />
@@ -161,7 +174,7 @@ const Index = () => {
                   Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
                 <Link
-                  to="/produtos"
+                  to={APP_PATHS.products}
                   className="btn-premium inline-block text-foreground"
                 >
                   Conhecer a Seleção
@@ -174,6 +187,10 @@ const Index = () => {
                       src={zenithBlack}
                       alt="Seleção em destaque da curadoria FADARY"
                       className="w-3/4 object-contain"
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
                   </div>

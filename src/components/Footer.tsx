@@ -1,14 +1,23 @@
 import { Instagram, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
+import { APP_PATHS } from "@/config/navigation";
 import fadaryLogo from "@/assets/fadary-logo-nav.png";
 
 const Footer = () => {
   return (
     <footer className="bg-background py-20 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-        <Link to="/" className="flex flex-col items-center gap-2" aria-label="Página inicial da FADARY">
-          <img src={fadaryLogo} alt="FADARY" className="h-20 object-contain" />
+        <Link to={APP_PATHS.home} className="flex flex-col items-center gap-2" aria-label="Página inicial da FADARY">
+          <img
+            src={fadaryLogo}
+            alt="FADARY"
+            className="h-20 object-contain"
+            width={480}
+            height={307}
+            loading="lazy"
+            decoding="async"
+          />
         </Link>
 
         <div className="text-[10px] tracking-[0.2em] text-muted-foreground text-center">

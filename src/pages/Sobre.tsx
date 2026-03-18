@@ -1,6 +1,7 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import aboutStory from "@/assets/about-story.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 
 const values = [
   {
@@ -32,7 +33,17 @@ const Sobre = () => {
       <section className="section-spacing relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background z-10" />
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
+          <picture className="block h-full w-full">
+            <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+            <img
+              src={heroBg}
+              alt=""
+              className="w-full h-full object-cover opacity-30"
+              width={1920}
+              height={1080}
+              decoding="async"
+            />
+          </picture>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
@@ -58,6 +69,10 @@ const Sobre = () => {
                 src={aboutStory}
                 alt="A história da FADARY"
                 className="w-full h-full object-cover"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </ScrollReveal>
