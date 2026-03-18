@@ -4,6 +4,7 @@ export const CONTACTS = {
   phoneHref: "tel:+5541997349187",
   instagramUrl: "https://www.instagram.com/fadarybeauty/",
   instagramHandle: "@fadarybeauty",
+  email: "mayara2204@gmail.com",
 } as const;
 
 export const whatsappMessages = {
