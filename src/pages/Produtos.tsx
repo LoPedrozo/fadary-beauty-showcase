@@ -5,7 +5,7 @@ import zenithBlack from "@/assets/zenith-black.jpg";
 import productSerum from "@/assets/product-serum.jpg";
 import productCleanser from "@/assets/product-cleanser.jpg";
 import productEyeCream from "@/assets/product-eye-cream.jpg";
-import fadaryIcon from "@/assets/fadary-icon.png";
+
 
 const products = [
   {
@@ -103,11 +103,6 @@ const Produtos = () => {
                     alt="Cuidado noturno da curadoria FADARY"
                     className="w-full h-full object-contain"
                   />
-                  <img
-                    src={fadaryIcon}
-                    alt=""
-                    className="absolute bottom-4 right-4 h-8 w-8 object-contain opacity-60"
-                  />
                 </div>
               </div>
             </div>
@@ -133,11 +128,6 @@ const Produtos = () => {
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                    />
-                    <img
-                      src={fadaryIcon}
-                      alt=""
-                      className="absolute bottom-3 right-3 h-6 w-6 object-contain opacity-50 group-hover:opacity-70 transition-opacity duration-700"
                     />
                   </div>
                   <h3 className="text-lg mb-2 text-foreground">{product.name}</h3>
