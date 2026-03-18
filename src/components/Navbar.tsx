@@ -19,8 +19,8 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 border-b border-border/30 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5">
-          <img src={fadaryIcon} alt="FADARY" className="h-9 w-9 object-contain" />
+        <Link to="/" className="flex items-center gap-3">
+          <img src={fadaryIcon} alt="FADARY" className="h-11 w-11 object-contain" />
           <span className="text-xl font-bold tracking-[0.3em] gold-gradient-text font-display">FADARY</span>
         </Link>
 
