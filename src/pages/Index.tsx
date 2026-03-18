@@ -39,19 +39,24 @@ const Index = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-          className="relative z-20 text-center px-6"
+          className="relative z-20 mx-auto max-w-5xl px-6 text-center"
         >
           <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
             Beleza, Cuidado e Presença
           </span>
-          <h1 className="text-5xl md:text-8xl mb-8 leading-tight font-display text-foreground">
+          <h1 className="text-5xl md:text-8xl leading-tight font-display text-foreground">
             FADARY
           </h1>
-          <p className="max-w-xl mx-auto text-sm md:text-base text-muted-foreground font-light leading-relaxed mb-12 font-body">
-            FADARY valoriza a beleza feminina com leveza, elegância e cuidado. Uma marca pensada
-            para acompanhar a rotina de autocuidado com bem-estar, feminilidade e beleza natural.
-          </p>
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <div className="mx-auto mt-16 max-w-[32rem] px-2 md:mt-20 md:max-w-[36rem]">
+            <p className="text-[0.95rem] sm:text-base md:text-[1.05rem] text-foreground/80 font-light italic leading-[1.85] tracking-[0.01em] font-body">
+              <span className="block">Seu brilho não vem apenas do que se vê,</span>
+              <span className="block">mas do que você sente.</span>
+            </p>
+            <p className="mt-6 text-xl sm:text-2xl md:text-[1.95rem] font-semibold leading-tight font-body gold-gradient-text">
+              Acredite na sua própria magia.
+            </p>
+          </div>
+          <div className="mt-12 flex flex-col md:flex-row gap-6 justify-center md:mt-14">
             <Link to="/produtos" className="btn-premium text-foreground">
               Explorar Curadoria
             </Link>
