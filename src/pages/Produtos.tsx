@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 import zenithBlack from "@/assets/zenith-black.jpg";
 import productSerum from "@/assets/product-serum.jpg";
 import productCleanser from "@/assets/product-cleanser.jpg";
@@ -85,7 +86,7 @@ const Produtos = () => {
                   Disponibilidade sob consulta, com novas escolhas chegando em breve.
                 </div>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Quero conhecer a seleção em destaque da FADARY."
+                  href={createWhatsAppLink(whatsappMessages.selectionHighlight)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-premium inline-flex items-center gap-2 text-foreground"
@@ -138,7 +139,7 @@ const Produtos = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-primary font-body">{product.availability}</span>
                     <a
-                      href={`https://wa.me/5511999999999?text=Olá! Quero saber mais sobre ${product.name} da curadoria FADARY.`}
+                      href={createWhatsAppLink(whatsappMessages.product(product.name))}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold font-body"

@@ -1,6 +1,7 @@
-import { Instagram, Phone, MessageCircle } from "lucide-react";
+import { Instagram, Mail, MessageCircle } from "lucide-react";
 import { useState, FormEvent } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 import { toast } from "sonner";
 
 const Contato = () => {
@@ -12,7 +13,7 @@ const Contato = () => {
     e.preventDefault();
 
     const contactMessage = [
-      "Olá! Quero falar com a FADARY.",
+      whatsappMessages.attendance,
       "",
       `Nome: ${name}`,
       `E-mail: ${email}`,
@@ -21,7 +22,7 @@ const Contato = () => {
       message,
     ].join("\n");
 
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(contactMessage)}`;
+    const whatsappUrl = createWhatsAppLink(contactMessage);
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     toast.success("Estamos abrindo o WhatsApp para continuar seu atendimento.");
@@ -63,7 +64,7 @@ const Contato = () => {
 
               <div className="space-y-8">
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Quero conhecer a curadoria da FADARY."
+                  href={createWhatsAppLink(whatsappMessages.attendance)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-6 group"
@@ -75,12 +76,12 @@ const Contato = () => {
                     <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
                       Atendimento
                     </span>
-                    <span className="text-lg text-foreground font-body">+55 (11) 99999-9999</span>
+                    <span className="text-lg text-foreground font-body">{CONTACTS.whatsappDisplay}</span>
                   </div>
                 </a>
 
                 <a
-                  href="https://instagram.com/fadary.beauty"
+                  href={CONTACTS.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-6 group"
@@ -92,22 +93,22 @@ const Contato = () => {
                     <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
                       Instagram
                     </span>
-                    <span className="text-lg text-foreground font-body">@fadary.beauty</span>
+                    <span className="text-lg text-foreground font-body">{CONTACTS.instagramHandle}</span>
                   </div>
                 </a>
 
                 <a
-                  href="tel:+5511999999999"
+                  href="mailto:mayara2204@gmail.com"
                   className="flex items-center gap-6 group"
                 >
                   <div className="w-14 h-14 border border-primary/30 flex items-center justify-center group-hover:bg-primary transition-all duration-400">
-                    <Phone className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
+                    <Mail className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
-                      Contato direto
+                      E-mail
                     </span>
-                    <span className="text-lg text-foreground font-body">+55 (11) 99999-9999</span>
+                    <span className="text-lg text-foreground font-body">mayara2204@gmail.com</span>
                   </div>
                 </a>
               </div>

@@ -1,5 +1,6 @@
 import { Instagram, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
 
         <div className="flex gap-8">
           <a
-            href="https://instagram.com/fadary.beauty"
+            href={CONTACTS.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hover-gold text-foreground"
@@ -24,7 +25,7 @@ const Footer = () => {
             <Instagram className="w-5 h-5" />
           </a>
           <a
-            href="https://wa.me/5511999999999"
+            href={createWhatsAppLink(whatsappMessages.attendance)}
             target="_blank"
             rel="noopener noreferrer"
             className="hover-gold text-foreground"

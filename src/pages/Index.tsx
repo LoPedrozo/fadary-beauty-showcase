@@ -2,6 +2,7 @@ import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
+import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 import heroBg from "@/assets/hero-bg.jpg";
 import zenithBlack from "@/assets/zenith-black.jpg";
 
@@ -130,7 +131,7 @@ const Index = () => {
                   Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Quero conhecer a curadoria da FADARY."
+                  href={createWhatsAppLink(whatsappMessages.selectionHighlight)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-premium inline-block text-foreground"
@@ -192,7 +193,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5511999999999"
+                href={createWhatsAppLink(whatsappMessages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-premium text-foreground"
@@ -200,7 +201,7 @@ const Index = () => {
                 Falar com a FADARY
               </a>
               <a
-                href="https://instagram.com/fadary.beauty"
+                href={CONTACTS.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body border border-border/30"
