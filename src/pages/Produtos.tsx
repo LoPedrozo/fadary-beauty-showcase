@@ -5,6 +5,7 @@ import zenithBlack from "@/assets/zenith-black.jpg";
 import productSerum from "@/assets/product-serum.jpg";
 import productCleanser from "@/assets/product-cleanser.jpg";
 import productEyeCream from "@/assets/product-eye-cream.jpg";
+import fadaryIcon from "@/assets/fadary-icon.png";
 
 const products = [
   {
