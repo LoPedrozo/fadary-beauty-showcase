@@ -45,12 +45,12 @@ const Produtos = () => {
   return (
     <div className="pt-20">
       <section className="section-spacing">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-5 text-center sm:px-6">
           <ScrollReveal>
             <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
               Curadoria FADARY
             </span>
-            <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Seleção FADARY</h1>
+            <h1 className="mb-8 text-3xl text-foreground sm:text-4xl md:text-7xl">Seleção FADARY</h1>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
             <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
               Uma seleção pensada para acompanhar a rotina de beleza e autocuidado da mulher. Aqui
@@ -62,9 +62,9 @@ const Produtos = () => {
       </section>
 
       <section className="pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="bg-surface border border-border/20 p-8 md:p-20 flex flex-col md:flex-row gap-16 items-center">
+            <div className="flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
                   Seleção em destaque
@@ -85,14 +85,14 @@ const Produtos = () => {
                   href={createWhatsAppLink(whatsappMessages.selectionHighlight)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-premium inline-flex items-center gap-2 text-foreground"
+                  className="btn-premium inline-flex w-full items-center gap-2 text-foreground sm:w-auto"
                 >
                   <MessageCircle className="w-4 h-4" />
                   Falar sobre esta seleção
                 </a>
               </div>
               <div className="flex-1 order-1 md:order-2">
-                <div className="aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-8 shadow-2xl border border-border/10 relative">
+                <div className="relative flex aspect-square items-center justify-center border border-border/10 bg-gradient-to-tr from-background to-secondary p-6 shadow-2xl sm:p-8">
                   <img
                     src={zenithBlack}
                     alt="Cuidado noturno da curadoria FADARY"
@@ -109,15 +109,15 @@ const Produtos = () => {
       </section>
 
       <section className="section-spacing bg-surface-elevated">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="mb-14 text-center sm:mb-20">
               <h2 className="text-3xl mb-4 text-foreground">Outros Cuidados</h2>
               <div className="w-12 h-[1px] bg-primary mx-auto" />
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 xl:grid-cols-3 xl:gap-12">
             {products.slice(1).map((product, i) => (
               <ScrollReveal key={product.name} delay={i * 0.1}>
                 <div className="product-card group">
@@ -139,8 +139,8 @@ const Produtos = () => {
                   <p className="text-sm text-muted-foreground mb-4 font-light font-body">
                     {product.description}
                   </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-primary font-body">{product.availability}</span>
+                  <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <span className="text-sm text-primary font-body">{product.availability}</span>
                     <a
                       href={createWhatsAppLink(whatsappMessages.product(product.name))}
                       target="_blank"

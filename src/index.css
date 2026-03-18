@@ -82,7 +82,7 @@
   }
 
   .btn-premium {
-    @apply inline-flex items-center justify-center gap-2 border border-primary px-8 py-3 uppercase text-xs tracking-[0.2em] relative overflow-hidden;
+    @apply inline-flex min-h-[3rem] items-center justify-center gap-2 border border-primary px-8 py-3 uppercase text-xs tracking-[0.2em] relative overflow-hidden;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     transition-property: color, background-color, border-color, transform, box-shadow, filter;
@@ -113,7 +113,7 @@
   }
 
   .section-spacing {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-20 sm:py-24 md:py-32 lg:py-40;
   }
 
   .hover-gold {

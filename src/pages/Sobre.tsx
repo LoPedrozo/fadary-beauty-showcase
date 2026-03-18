@@ -45,13 +45,13 @@ const Sobre = () => {
             />
           </picture>
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-5 text-center sm:px-6">
           <ScrollReveal>
             <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
               Nossa Essência
             </span>
-            <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Sobre a FADARY</h1>
-            <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
+            <h1 className="mb-8 text-3xl text-foreground sm:text-4xl md:text-7xl">Sobre a FADARY</h1>
+            <p className="max-w-2xl mx-auto text-sm text-muted-foreground font-light leading-relaxed font-body sm:text-base">
               FADARY nasce de um olhar delicado sobre beleza, feminilidade e autocuidado. Uma
               marca em construção, pensada para acompanhar a mulher com leveza, presença e
               bem-estar.
@@ -62,7 +62,7 @@ const Sobre = () => {
 
       {/* Story */}
       <section className="section-spacing bg-surface-elevated">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid items-center gap-14 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:gap-24">
           <ScrollReveal>
             <div className="aspect-[4/5] overflow-hidden border border-border/30">
               <img
@@ -102,11 +102,11 @@ const Sobre = () => {
 
       {/* Mission */}
       <section className="section-spacing">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-5 text-center sm:px-6">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Nossa Visão</h2>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-12" />
-            <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed italic font-body">
+            <p className="text-base text-muted-foreground font-light leading-relaxed italic font-body sm:text-lg md:text-xl">
               "Construir uma marca feminina de beleza e autocuidado em que cada detalhe transmita
               delicadeza, presença e bem-estar, valorizando a beleza natural no dia a dia."
             </p>
@@ -116,9 +116,9 @@ const Sobre = () => {
 
       {/* Values */}
       <section className="section-spacing bg-surface-elevated">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="mb-14 text-center sm:mb-20">
               <h2 className="text-3xl md:text-4xl mb-4 text-foreground">Nossos Valores</h2>
               <div className="w-12 h-[1px] bg-primary mx-auto" />
             </div>
@@ -126,7 +126,7 @@ const Sobre = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {values.map((v, i) => (
               <ScrollReveal key={v.title} delay={i * 0.1}>
-                <div className="border border-border/20 p-10 bg-surface hover:border-primary/30 transition-colors duration-500">
+                <div className="border border-border/20 bg-surface p-6 transition-colors duration-500 hover:border-primary/30 sm:p-8 md:p-10">
                   <span className="block text-primary text-xl mb-4 italic font-display">
                     0{i + 1}.
                   </span>

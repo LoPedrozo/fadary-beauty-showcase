@@ -50,7 +50,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden pb-14 pt-28 sm:pb-16 sm:pt-32 md:pb-20 md:pt-36">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background z-10" />
           <picture className="block h-full w-full">
@@ -71,32 +71,41 @@ const Index = () => {
           initial="hidden"
           animate="visible"
           variants={heroContainer}
-          className="relative z-20 mx-auto max-w-5xl px-6 text-center"
+          className="relative z-20 mx-auto max-w-5xl px-5 text-center sm:px-6"
         >
           <motion.div variants={heroItem}>
-            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
+            <span className="mb-4 block text-[10px] tracking-[0.35em] text-primary uppercase font-body sm:text-xs sm:tracking-[0.5em]">
               Beleza, Cuidado e Presença
             </span>
-            <h1 className="text-5xl md:text-8xl leading-tight font-display text-foreground">
+            <h1 className="text-[3.1rem] leading-none font-display text-foreground sm:text-6xl md:text-8xl">
               FADARY
             </h1>
           </motion.div>
-          <motion.div variants={heroItem} className="mx-auto mt-16 max-w-[32rem] px-2 md:mt-20 md:max-w-[36rem]">
-            <p className="text-[0.95rem] sm:text-base md:text-[1.05rem] text-foreground/80 font-light italic leading-[1.85] tracking-[0.01em] font-body">
+          <motion.div
+            variants={heroItem}
+            className="mx-auto mt-12 max-w-[28rem] px-1 sm:mt-16 sm:max-w-[32rem] sm:px-2 md:mt-20 md:max-w-[36rem]"
+          >
+            <p className="text-[0.9rem] text-foreground/80 font-light italic leading-[1.75] tracking-[0.01em] font-body sm:text-base sm:leading-[1.85] md:text-[1.05rem]">
               <span className="block">Seu brilho não vem apenas do que se vê,</span>
               <span className="block">mas do que você sente.</span>
             </p>
-            <p className="mt-6 text-xl sm:text-2xl md:text-[1.95rem] font-semibold leading-tight font-body gold-gradient-text">
+            <p className="mt-5 text-[1.35rem] font-semibold leading-tight font-body gold-gradient-text sm:mt-6 sm:text-[1.7rem] md:text-[1.95rem]">
               Acredite na sua própria magia.
             </p>
           </motion.div>
-          <motion.div variants={heroItem} className="mt-12 flex flex-col md:flex-row gap-6 justify-center md:mt-14">
-            <Link to={APP_PATHS.products} className="btn-premium text-foreground">
+          <motion.div
+            variants={heroItem}
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:gap-5 md:mt-14 md:flex-row md:gap-6"
+          >
+            <Link
+              to={APP_PATHS.products}
+              className="btn-premium w-full max-w-sm text-foreground sm:w-auto"
+            >
               Explorar Curadoria
             </Link>
             <Link
               to={APP_PATHS.contact}
-              className="subtle-link-cta px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body"
+              className="subtle-link-cta flex min-h-[3rem] w-full max-w-sm items-center justify-center gap-2 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold font-body sm:w-auto sm:px-8"
             >
               Falar com a FADARY <ArrowRight className="w-4 h-4" />
             </Link>
@@ -106,7 +115,7 @@ const Index = () => {
 
       {/* About Intro */}
       <section className="section-spacing bg-surface-elevated">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid items-center gap-14 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:gap-24">
           <ScrollReveal>
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden border border-border/30">
@@ -138,7 +147,7 @@ const Index = () => {
                   elegante e fácil de viver no dia a dia.
                 </p>
               </div>
-              <div className="mt-12 grid grid-cols-3 gap-8 border-t border-border/30 pt-8">
+              <div className="mt-10 grid grid-cols-1 gap-6 border-t border-border/30 pt-8 text-center sm:mt-12 sm:grid-cols-3 sm:gap-8 sm:text-left">
                 {["Autocuidado", "Presença", "Delicadeza"].map((value, i) => (
                   <div key={value}>
                     <span className="block text-primary text-xl mb-2 italic font-display">
@@ -157,9 +166,9 @@ const Index = () => {
 
       {/* Zenith Black Featured */}
       <section className="section-spacing bg-background relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
-            <div className="bg-surface border border-border/20 p-8 md:p-20 flex flex-col md:flex-row gap-16 items-center">
+            <div className="flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
                 <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
                   Curadoria FADARY
@@ -175,13 +184,13 @@ const Index = () => {
                 </div>
                 <Link
                   to={APP_PATHS.products}
-                  className="btn-premium inline-block text-foreground"
+                  className="btn-premium inline-flex w-full text-foreground sm:w-auto"
                 >
                   Conhecer a Seleção
                 </Link>
               </div>
               <div className="flex-1 order-1 md:order-2 relative">
-                <div className="w-full aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-12 shadow-2xl">
+                <div className="flex aspect-square w-full items-center justify-center bg-gradient-to-tr from-background to-secondary p-6 shadow-2xl sm:p-10 md:p-12">
                   <div className="w-full h-full border border-primary/20 flex items-center justify-center relative overflow-hidden">
                     <img
                       src={zenithBlack}
@@ -203,17 +212,17 @@ const Index = () => {
 
       {/* Testimonials */}
       <section className="section-spacing bg-surface-elevated border-y border-border/20">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6">
           <ScrollReveal>
             <div className="text-center">
               <Quote className="w-10 h-10 text-primary/30 mx-auto mb-8" />
             </div>
           </ScrollReveal>
-          <div className="space-y-20">
+          <div className="space-y-14 sm:space-y-16 md:space-y-20">
             {testimonials.map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className="text-center">
-                  <p className="text-xl md:text-2xl font-light italic leading-relaxed mb-6 text-foreground font-body">
+                  <p className="mb-6 text-lg font-light italic leading-relaxed text-foreground font-body sm:text-xl md:text-2xl">
                     "{t.text}"
                   </p>
                   <span className="text-xs tracking-[0.3em] uppercase text-primary font-body">
@@ -229,19 +238,19 @@ const Index = () => {
       {/* CTA */}
       <section className="section-spacing">
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-3xl mx-auto px-5 text-center sm:px-6">
             <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Conheça a FADARY</h2>
             <p className="text-muted-foreground mb-12 font-light leading-relaxed font-body">
               Estamos construindo uma marca pensada para acompanhar sua rotina de autocuidado com
               leveza, beleza natural e um olhar acolhedor para o bem-estar feminino. Fale conosco
               e conheça mais de perto a essência da FADARY.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-6">
               <a
                 href={createWhatsAppLink(whatsappMessages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-premium text-foreground"
+                className="btn-premium w-full text-foreground sm:w-auto"
               >
                 Falar com a FADARY
               </a>
@@ -249,7 +258,7 @@ const Index = () => {
                 href={CONTACTS.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="subtle-link-cta px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body border border-border/30"
+                className="subtle-link-cta flex min-h-[3rem] w-full items-center justify-center gap-2 border border-border/30 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold font-body sm:w-auto sm:px-8"
               >
                 Acompanhar no Instagram
               </a>
