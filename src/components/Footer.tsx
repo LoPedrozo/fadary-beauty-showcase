@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-background py-20 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-        <Link to="/" className="flex flex-col items-center gap-2">
+        <Link to="/" className="flex flex-col items-center gap-2" aria-label="Página inicial da FADARY">
           <img src={fadaryLogo} alt="FADARY" className="h-20 object-contain" />
         </Link>
 
@@ -21,6 +21,7 @@ const Footer = () => {
             href={CONTACTS.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram da FADARY"
             className="hover-gold text-foreground"
           >
             <Instagram className="w-5 h-5" />
@@ -29,6 +30,7 @@ const Footer = () => {
             href={createWhatsAppLink(whatsappMessages.attendance)}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="WhatsApp da FADARY"
             className="hover-gold text-foreground"
           >
             <Phone className="w-5 h-5" />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,11 +15,17 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const isActivePath = (path: string) => location.pathname === path;
+  const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="fixed w-full z-50 border-b border-border/30 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3" aria-label="Página inicial da FADARY">
           <img src={fadaryIcon} alt="FADARY" className="h-[84px] w-[84px] object-contain" />
           <span className="text-xl font-bold tracking-[0.3em] gold-gradient-text font-display">FADARY</span>
         </Link>
@@ -30,7 +36,8 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`hover-gold ${location.pathname === link.path ? "text-primary" : "text-foreground"}`}
+              aria-current={isActivePath(link.path) ? "page" : undefined}
+              className={`hover-gold ${isActivePath(link.path) ? "text-primary" : "text-foreground"}`}
             >
               {link.label}
             </Link>
@@ -51,6 +58,9 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden text-foreground"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -65,6 +75,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            id="mobile-navigation"
             className="md:hidden bg-background border-t border-border/30 overflow-hidden"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
@@ -72,9 +83,10 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsOpen(false)}
+                  aria-current={isActivePath(link.path) ? "page" : undefined}
+                  onClick={closeMenu}
                   className={`text-xs uppercase tracking-[0.2em] hover-gold ${
-                    location.pathname === link.path ? "text-primary" : "text-foreground"
+                    isActivePath(link.path) ? "text-primary" : "text-foreground"
                   }`}
                 >
                   {link.label}
@@ -84,6 +96,7 @@ const Navbar = () => {
                 href={createWhatsAppLink(whatsappMessages.attendance)}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
                 className="btn-premium text-center text-foreground mt-4"
               >
                 <MessageCircle className="w-4 h-4 inline mr-2" />

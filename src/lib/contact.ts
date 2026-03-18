@@ -1,7 +1,6 @@
 export const CONTACTS = {
   whatsappNumber: "5541997349187",
   whatsappDisplay: "+55 (41) 99734-9187",
-  phoneHref: "tel:+5541997349187",
   instagramUrl: "https://www.instagram.com/fadarybeauty/",
   instagramHandle: "@fadarybeauty",
   email: "mayara2204@gmail.com",
