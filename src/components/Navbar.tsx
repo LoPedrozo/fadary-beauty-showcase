@@ -37,7 +37,7 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               aria-current={isActivePath(link.path) ? "page" : undefined}
-              className={`hover-gold ${isActivePath(link.path) ? "text-primary" : "text-foreground"}`}
+              className={`nav-link-premium hover-gold ${isActivePath(link.path) ? "text-primary" : "text-foreground"}`}
             >
               {link.label}
             </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
             href={createWhatsAppLink(whatsappMessages.attendance)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-[10px] border border-primary/30 px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-all duration-400 uppercase tracking-[0.15em]"
+            className="hidden md:flex subtle-link-cta items-center gap-2 text-[10px] border border-primary/30 px-4 py-2 hover:bg-primary hover:text-primary-foreground uppercase tracking-[0.15em]"
           >
             <MessageCircle className="w-4 h-4" />
             Atendimento

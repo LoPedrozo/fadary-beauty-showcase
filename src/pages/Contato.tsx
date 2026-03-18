@@ -21,9 +21,9 @@ const Contato = () => {
                   href={createWhatsAppLink(whatsappMessages.attendance)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block border border-primary/40 bg-gradient-to-br from-primary/15 via-primary/8 to-transparent px-6 py-8 transition-all duration-500 hover:-translate-y-1 hover:border-primary hover:shadow-[0_18px_60px_rgba(0,0,0,0.22)] sm:px-8 md:px-10 md:py-10"
+                  className="contact-card contact-card-primary group block border border-primary/40 bg-gradient-to-br from-primary/15 via-primary/8 to-transparent px-6 py-8 sm:px-8 md:px-10 md:py-10"
                 >
-                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center border border-primary/30 bg-primary/10 transition-all duration-400 group-hover:bg-primary">
+                  <div className="contact-card-icon mx-auto mb-5 flex h-16 w-16 items-center justify-center border border-primary/30 bg-primary/10 group-hover:bg-primary">
                     <MessageCircle className="h-6 w-6 text-primary transition-colors duration-400 group-hover:text-primary-foreground" />
                   </div>
                   <div className="space-y-3">
@@ -47,9 +47,9 @@ const Contato = () => {
                     href={CONTACTS.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group border border-border/30 bg-background/40 px-6 py-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5"
+                    className="contact-card group border border-border/30 bg-background/40 px-6 py-7"
                   >
-                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 transition-all duration-400 group-hover:bg-primary group-hover:border-primary">
+                    <div className="contact-card-icon mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary">
                       <Instagram className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
                     </div>
                     <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">
@@ -62,9 +62,9 @@ const Contato = () => {
 
                   <a
                     href={`mailto:${CONTACTS.email}`}
-                    className="group border border-border/30 bg-background/40 px-6 py-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5"
+                    className="contact-card group border border-border/30 bg-background/40 px-6 py-7"
                   >
-                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 transition-all duration-400 group-hover:bg-primary group-hover:border-primary">
+                    <div className="contact-card-icon mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary">
                       <Mail className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
                     </div>
                     <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">

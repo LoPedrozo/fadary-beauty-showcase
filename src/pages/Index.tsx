@@ -1,6 +1,6 @@
 import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -22,6 +22,29 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const shouldReduceMotion = useReducedMotion();
+  const heroOffset = shouldReduceMotion ? 0 : 20;
+  const heroTransition = {
+    duration: shouldReduceMotion ? 0.01 : 0.72,
+    ease: [0.23, 1, 0.32, 1] as const,
+  };
+
+  const heroContainer = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.14,
+        delayChildren: shouldReduceMotion ? 0 : 0.16,
+      },
+    },
+  };
+
+  const heroItem = {
+    hidden: { opacity: 0, y: heroOffset },
+    visible: { opacity: 1, y: 0, transition: heroTransition },
+  };
+
   return (
     <div>
       {/* Hero */}
@@ -36,18 +59,20 @@ const Index = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+          initial="hidden"
+          animate="visible"
+          variants={heroContainer}
           className="relative z-20 mx-auto max-w-5xl px-6 text-center"
         >
-          <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
-            Beleza, Cuidado e Presença
-          </span>
-          <h1 className="text-5xl md:text-8xl leading-tight font-display text-foreground">
-            FADARY
-          </h1>
-          <div className="mx-auto mt-16 max-w-[32rem] px-2 md:mt-20 md:max-w-[36rem]">
+          <motion.div variants={heroItem}>
+            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
+              Beleza, Cuidado e Presença
+            </span>
+            <h1 className="text-5xl md:text-8xl leading-tight font-display text-foreground">
+              FADARY
+            </h1>
+          </motion.div>
+          <motion.div variants={heroItem} className="mx-auto mt-16 max-w-[32rem] px-2 md:mt-20 md:max-w-[36rem]">
             <p className="text-[0.95rem] sm:text-base md:text-[1.05rem] text-foreground/80 font-light italic leading-[1.85] tracking-[0.01em] font-body">
               <span className="block">Seu brilho não vem apenas do que se vê,</span>
               <span className="block">mas do que você sente.</span>
@@ -55,18 +80,18 @@ const Index = () => {
             <p className="mt-6 text-xl sm:text-2xl md:text-[1.95rem] font-semibold leading-tight font-body gold-gradient-text">
               Acredite na sua própria magia.
             </p>
-          </div>
-          <div className="mt-12 flex flex-col md:flex-row gap-6 justify-center md:mt-14">
+          </motion.div>
+          <motion.div variants={heroItem} className="mt-12 flex flex-col md:flex-row gap-6 justify-center md:mt-14">
             <Link to="/produtos" className="btn-premium text-foreground">
               Explorar Curadoria
             </Link>
             <Link
               to="/contato"
-              className="px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body"
+              className="subtle-link-cta px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body"
             >
               Falar com a FADARY <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -207,7 +232,7 @@ const Index = () => {
                 href={CONTACTS.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body border border-border/30"
+                className="subtle-link-cta px-8 py-3 text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-foreground hover-gold font-body border border-border/30"
               >
                 Acompanhar no Instagram
               </a>

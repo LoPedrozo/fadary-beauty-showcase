@@ -6,7 +6,6 @@ import productSerum from "@/assets/product-serum.jpg";
 import productCleanser from "@/assets/product-cleanser.jpg";
 import productEyeCream from "@/assets/product-eye-cream.jpg";
 
-
 const products = [
   {
     name: "Cuidado Noturno",
@@ -122,12 +121,12 @@ const Produtos = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {products.slice(1).map((product, i) => (
               <ScrollReveal key={product.name} delay={i * 0.1}>
-                <div className="group cursor-pointer">
-                  <div className="aspect-[3/4] bg-surface mb-6 overflow-hidden relative border border-border/20">
+                <div className="product-card group">
+                  <div className="product-card-visual aspect-[3/4] bg-surface mb-6 overflow-hidden relative border border-border/20">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="product-card-media w-full h-full object-cover grayscale group-hover:grayscale-0"
                     />
                   </div>
                   <h3 className="text-lg mb-2 text-foreground">{product.name}</h3>
@@ -143,7 +142,7 @@ const Produtos = () => {
                       href={createWhatsAppLink(whatsappMessages.product(product.name))}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold font-body"
+                      className="subtle-link-cta text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold font-body"
                     >
                       Consultar
                     </a>
