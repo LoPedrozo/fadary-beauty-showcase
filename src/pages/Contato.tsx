@@ -1,160 +1,82 @@
-import { Instagram, Mail, MessageCircle } from "lucide-react";
-import { useState, FormEvent } from "react";
+import { ArrowRight, Instagram, Mail, MessageCircle } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
-import { toast } from "sonner";
 
 const Contato = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-
-    const contactMessage = [
-      whatsappMessages.attendance,
-      "",
-      `Nome: ${name}`,
-      `E-mail: ${email}`,
-      "",
-      "Mensagem:",
-      message,
-    ].join("\n");
-
-    const whatsappUrl = createWhatsAppLink(contactMessage);
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    toast.success("Estamos abrindo o WhatsApp para continuar seu atendimento.");
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   return (
     <div className="pt-20">
-      {/* Header */}
-      <section className="section-spacing">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <ScrollReveal>
-            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
-              Atendimento FADARY
-            </span>
-            <h1 className="text-4xl md:text-7xl mb-8 text-foreground">Contato</h1>
-            <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
-              Se você deseja conhecer a curadoria da FADARY, tirar dúvidas ou acompanhar as
-              novidades da marca, estamos por aqui com um atendimento próximo, elegante e
-              acolhedor.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Contact Content */}
       <section className="section-spacing bg-surface-elevated">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24">
+        <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
-            <div>
-              <h2 className="text-3xl mb-8 text-foreground">Fale com a FADARY</h2>
-              <p className="text-muted-foreground mb-12 font-light font-body">
-                Escolha o canal que fizer mais sentido para você. Estamos disponíveis para
-                conversar sobre referências em curadoria, disponibilidade e próximos lançamentos.
+            <div className="mx-auto max-w-4xl border border-border/20 bg-surface px-6 py-12 text-center sm:px-10 md:px-14 md:py-16">
+              <h1 className="text-4xl md:text-6xl text-foreground">Fale com a Fadary</h1>
+              <div className="w-12 h-[1px] bg-primary mx-auto my-8" />
+              <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto font-body">
+                Escolha o canal que fizer mais sentido para você. Estamos disponíveis para tirar
+                dúvidas, apresentar a curadoria e acompanhar seu atendimento com proximidade.
               </p>
 
-              <div className="space-y-8">
+              <div className="mt-12 space-y-5">
                 <a
                   href={createWhatsAppLink(whatsappMessages.attendance)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-6 group"
+                  className="group block border border-primary/40 bg-gradient-to-br from-primary/15 via-primary/8 to-transparent px-6 py-8 transition-all duration-500 hover:-translate-y-1 hover:border-primary hover:shadow-[0_18px_60px_rgba(0,0,0,0.22)] sm:px-8 md:px-10 md:py-10"
                 >
-                  <div className="w-14 h-14 border border-primary/30 flex items-center justify-center group-hover:bg-primary transition-all duration-400">
-                    <MessageCircle className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center border border-primary/30 bg-primary/10 transition-all duration-400 group-hover:bg-primary">
+                    <MessageCircle className="h-6 w-6 text-primary transition-colors duration-400 group-hover:text-primary-foreground" />
                   </div>
-                  <div>
-                    <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
-                      Atendimento
+                  <div className="space-y-3">
+                    <span className="block text-[10px] uppercase text-primary tracking-[0.35em] font-body">
+                      WhatsApp
                     </span>
-                    <span className="text-lg text-foreground font-body">{CONTACTS.whatsappDisplay}</span>
+                    <span className="block text-2xl md:text-3xl text-foreground font-body">
+                      {CONTACTS.whatsappDisplay}
+                    </span>
+                    <p className="text-sm text-muted-foreground font-body">
+                      Atendimento rápido via WhatsApp
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-foreground font-body">
+                      Iniciar conversa <ArrowRight className="h-4 w-4" />
+                    </span>
                   </div>
                 </a>
 
-                <a
-                  href={CONTACTS.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-6 group"
-                >
-                  <div className="w-14 h-14 border border-primary/30 flex items-center justify-center group-hover:bg-primary transition-all duration-400">
-                    <Instagram className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
-                  </div>
-                  <div>
-                    <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
+                <div className="grid gap-5 md:grid-cols-2">
+                  <a
+                    href={CONTACTS.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group border border-border/30 bg-background/40 px-6 py-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5"
+                  >
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 transition-all duration-400 group-hover:bg-primary group-hover:border-primary">
+                      <Instagram className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
+                    </div>
+                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">
                       Instagram
                     </span>
-                    <span className="text-lg text-foreground font-body">{CONTACTS.instagramHandle}</span>
-                  </div>
-                </a>
+                    <span className="mt-3 block text-lg text-foreground font-body">
+                      {CONTACTS.instagramHandle}
+                    </span>
+                  </a>
 
-                <a
-                  href="mailto:mayara2204@gmail.com"
-                  className="flex items-center gap-6 group"
-                >
-                  <div className="w-14 h-14 border border-primary/30 flex items-center justify-center group-hover:bg-primary transition-all duration-400">
-                    <Mail className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
-                  </div>
-                  <div>
-                    <span className="block text-[10px] uppercase text-muted-foreground tracking-widest font-body">
+                  <a
+                    href={`mailto:${CONTACTS.email}`}
+                    className="group border border-border/30 bg-background/40 px-6 py-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5"
+                  >
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 transition-all duration-400 group-hover:bg-primary group-hover:border-primary">
+                      <Mail className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
+                    </div>
+                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">
                       E-mail
                     </span>
-                    <span className="text-lg text-foreground font-body">mayara2204@gmail.com</span>
-                  </div>
-                </a>
+                    <span className="mt-3 block break-all text-lg text-foreground font-body">
+                      {CONTACTS.email}
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-6 bg-surface p-10 border border-border/20"
-            >
-              <h3 className="text-xl mb-3 text-foreground">Escreva para a FADARY</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed font-body">
-                Ao enviar, abriremos o WhatsApp com sua mensagem preenchida para continuar o
-                atendimento.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  placeholder="SEU NOME"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="bg-transparent border-b border-border py-4 text-xs focus:border-primary outline-none transition-all text-foreground placeholder:text-muted-foreground font-body tracking-widest"
-                />
-                <input
-                  type="email"
-                  placeholder="SEU E-MAIL"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-transparent border-b border-border py-4 text-xs focus:border-primary outline-none transition-all text-foreground placeholder:text-muted-foreground font-body tracking-widest"
-                />
-              </div>
-              <textarea
-                placeholder="COMO A FADARY PODE TE ATENDER?"
-                rows={4}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                className="w-full bg-transparent border-b border-border py-4 text-xs focus:border-primary outline-none transition-all resize-none text-foreground placeholder:text-muted-foreground font-body tracking-widest"
-              />
-              <button type="submit" className="btn-premium w-full mt-8 text-foreground">
-                Continuar no WhatsApp
-              </button>
-            </form>
           </ScrollReveal>
         </div>
       </section>
