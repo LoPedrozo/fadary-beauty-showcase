@@ -103,11 +103,6 @@ const Produtos = () => {
                     alt="Cuidado noturno da curadoria FADARY"
                     className="w-full h-full object-contain"
                   />
-                  <img
-                    src={fadaryIcon}
-                    alt=""
-                    className="absolute bottom-4 right-4 h-8 w-8 object-contain opacity-60"
-                  />
                 </div>
               </div>
             </div>
