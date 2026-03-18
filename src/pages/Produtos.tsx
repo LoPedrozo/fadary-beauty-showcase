@@ -97,11 +97,16 @@ const Produtos = () => {
                 </a>
               </div>
               <div className="flex-1 order-1 md:order-2">
-                <div className="aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-8 shadow-2xl border border-border/10">
+                <div className="aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-8 shadow-2xl border border-border/10 relative">
                   <img
                     src={zenithBlack}
                     alt="Cuidado noturno da curadoria FADARY"
                     className="w-full h-full object-contain"
+                  />
+                  <img
+                    src={fadaryIcon}
+                    alt=""
+                    className="absolute bottom-4 right-4 h-8 w-8 object-contain opacity-60"
                   />
                 </div>
               </div>
