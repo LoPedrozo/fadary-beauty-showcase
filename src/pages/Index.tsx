@@ -130,14 +130,12 @@ const Index = () => {
                 <div className="text-lg md:text-2xl mb-10 font-light italic text-foreground font-body">
                   Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
-                <a
-                  href={createWhatsAppLink(whatsappMessages.selectionHighlight)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/produtos"
                   className="btn-premium inline-block text-foreground"
                 >
                   Conhecer a Seleção
-                </a>
+                </Link>
               </div>
               <div className="flex-1 order-1 md:order-2 relative">
                 <div className="w-full aspect-square bg-gradient-to-tr from-background to-secondary flex items-center justify-center p-12 shadow-2xl">
