@@ -1,6 +1,7 @@
 import { Instagram, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CONTACTS, createWhatsAppLink, whatsappMessages } from "@/lib/contact";
+import fadaryLogo from "@/assets/fadary-logo.png";
 
 const Footer = () => {
   return (
