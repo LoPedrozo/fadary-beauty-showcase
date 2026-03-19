@@ -11,7 +11,7 @@ const Contato = () => {
             <div className="panel-premium mx-auto max-w-4xl border border-border/20 bg-surface px-5 py-10 text-center sm:px-8 sm:py-12 md:px-14 md:py-16">
               <h1 className="text-3xl text-foreground sm:text-4xl md:text-6xl">Fale com a Fadary</h1>
               <div className="w-12 h-[1px] bg-primary mx-auto my-8" />
-              <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82] font-body">
+              <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82]">
                 Escolha o canal que fizer mais sentido para você. Estamos disponíveis para tirar
                 dúvidas, apresentar a curadoria e acompanhar seu atendimento com proximidade.
               </p>
@@ -27,16 +27,16 @@ const Contato = () => {
                     <MessageCircle className="h-6 w-6 text-primary transition-colors duration-400 group-hover:text-primary-foreground" />
                   </div>
                   <div className="space-y-3">
-                    <span className="block text-[10px] uppercase text-primary tracking-[0.35em] font-body">
+                    <span className="block text-[10px] uppercase text-primary tracking-[0.35em]">
                       WhatsApp
                     </span>
-                    <span className="block break-words text-xl text-foreground font-body sm:text-2xl md:text-3xl">
+                    <span className="block break-words text-xl text-foreground sm:text-2xl md:text-3xl">
                       {CONTACTS.whatsappDisplay}
                     </span>
-                    <p className="text-sm text-muted-foreground font-body">
+                    <p className="text-sm text-muted-foreground">
                       Atendimento rápido via WhatsApp
                     </p>
-                    <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-foreground font-body">
+                    <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-foreground">
                       Iniciar conversa <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -52,10 +52,10 @@ const Contato = () => {
                     <div className="contact-card-icon mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary">
                       <Instagram className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
                     </div>
-                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">
+                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em]">
                       Instagram
                     </span>
-                    <span className="mt-3 block text-base text-foreground font-body sm:text-lg">
+                    <span className="mt-3 block text-base text-foreground sm:text-lg">
                       {CONTACTS.instagramHandle}
                     </span>
                   </a>
@@ -67,10 +67,10 @@ const Contato = () => {
                     <div className="contact-card-icon mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary">
                       <Mail className="h-5 w-5 text-foreground transition-colors duration-400 group-hover:text-primary-foreground" />
                     </div>
-                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em] font-body">
+                    <span className="block text-[10px] uppercase text-muted-foreground tracking-[0.3em]">
                       E-mail
                     </span>
-                    <span className="mt-3 block break-all text-base text-foreground font-body sm:text-lg">
+                    <span className="mt-3 block break-all text-base text-foreground sm:text-lg">
                       {CONTACTS.email}
                     </span>
                   </a>

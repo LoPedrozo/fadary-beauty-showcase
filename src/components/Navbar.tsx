@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,10 +12,6 @@ const Navbar = () => {
   const isActivePath = (path: string) => location.pathname === path;
   const closeMenu = () => setIsOpen(false);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
-
   return (
     <nav className="fixed w-full z-50 border-b border-border/30 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex h-[4.5rem] items-center justify-between px-4 sm:h-20 sm:px-6">
@@ -23,6 +19,7 @@ const Navbar = () => {
           to={APP_PATHS.home}
           className="flex min-w-0 items-center gap-2.5 sm:gap-3"
           aria-label="Página inicial da FADARY"
+          onClick={closeMenu}
         >
           <img
             src={fadaryIcon}

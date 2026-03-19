@@ -6,15 +6,16 @@ import productSerum from "@/assets/product-serum.jpg";
 import productCleanser from "@/assets/product-cleanser.jpg";
 import productEyeCream from "@/assets/product-eye-cream.jpg";
 
+const featuredProduct = {
+  name: "Cuidado Noturno",
+  category: "Em destaque",
+  image: zenithBlack,
+  description:
+    "Um cuidado pensado para o fim do dia, quando a pele pede conforto, hidratação e uma pausa tranquila na rotina. A curadoria da FADARY reúne escolhas que ajudam a transformar esse momento em um gesto simples de autocuidado.",
+  availability: "Disponibilidade sob consulta, com novas escolhas chegando em breve.",
+};
+
 const products = [
-  {
-    name: "Cuidado Noturno",
-    category: "Em destaque",
-    description:
-      "Um cuidado pensado para a rotina da noite, ajudando a manter a pele hidratada, confortável e com aparência descansada.",
-    availability: "Sob consulta",
-    image: zenithBlack,
-  },
   {
     name: "Serum de Luminosidade",
     category: "Hidratação e viço",
@@ -47,12 +48,12 @@ const Produtos = () => {
       <section className="section-spacing">
         <div className="max-w-4xl mx-auto px-5 text-center sm:px-6">
           <ScrollReveal>
-            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
+            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block">
               Curadoria FADARY
             </span>
             <h1 className="mb-8 text-3xl text-foreground sm:text-4xl md:text-7xl">Seleção FADARY</h1>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
-            <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82] font-body">
+            <p className="max-w-2xl mx-auto text-muted-foreground font-light leading-[1.82]">
               Uma seleção pensada para acompanhar a rotina de beleza e autocuidado da mulher. Aqui
               você encontra produtos e escolhas que valorizam hidratação, cuidado diário,
               bem-estar e beleza natural.
@@ -66,20 +67,18 @@ const Produtos = () => {
           <ScrollReveal>
             <div className="panel-premium flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
-                <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
+                <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block">
                   Seleção em destaque
                 </span>
-                <h2 className="mb-6 text-4xl text-foreground md:text-6xl">{products[0].name}</h2>
-                <p className="mb-4 text-muted-foreground font-light leading-[1.82] font-body">
-                  Um cuidado pensado para o fim do dia, quando a pele pede conforto, hidratação e
-                  uma pausa tranquila na rotina. A curadoria da FADARY reúne escolhas que ajudam a
-                  transformar esse momento em um gesto simples de autocuidado.
+                <h2 className="mb-6 text-4xl text-foreground md:text-6xl">{featuredProduct.name}</h2>
+                <p className="mb-4 text-muted-foreground font-light leading-[1.82]">
+                  {featuredProduct.description}
                 </p>
-                <p className="text-xs text-muted-foreground mb-8 uppercase tracking-wider font-body">
-                  {products[0].category}
+                <p className="text-xs text-muted-foreground mb-8 uppercase tracking-wider">
+                  {featuredProduct.category}
                 </p>
-                <div className="mb-10 text-xl font-light italic text-foreground font-body md:text-2xl">
-                  Disponibilidade sob consulta, com novas escolhas chegando em breve.
+                <div className="mb-10 text-xl font-light italic text-foreground md:text-2xl">
+                  {featuredProduct.availability}
                 </div>
                 <a
                   href={createWhatsAppLink(whatsappMessages.selectionHighlight)}
@@ -94,8 +93,8 @@ const Produtos = () => {
               <div className="flex-1 order-1 md:order-2">
                 <div className="relative flex aspect-square items-center justify-center border border-border/10 bg-gradient-to-tr from-background to-secondary p-6 shadow-2xl sm:p-8">
                   <img
-                    src={zenithBlack}
-                    alt="Cuidado noturno da curadoria FADARY"
+                    src={featuredProduct.image}
+                    alt={`${featuredProduct.name} da curadoria FADARY`}
                     className="w-full h-full object-contain"
                     width={1024}
                     height={1024}
@@ -118,7 +117,7 @@ const Produtos = () => {
           </ScrollReveal>
 
           <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 xl:grid-cols-3 xl:gap-12">
-            {products.slice(1).map((product, i) => (
+            {products.map((product, i) => (
               <ScrollReveal key={product.name} delay={i * 0.1}>
                 <div className="product-card group">
                   <div className="product-card-visual aspect-[3/4] bg-surface mb-6 overflow-hidden relative border border-border/20">
@@ -133,19 +132,19 @@ const Produtos = () => {
                     />
                   </div>
                   <h3 className="text-lg mb-2 text-foreground">{product.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider font-body">
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">
                     {product.category}
                   </p>
-                  <p className="mb-4 flex-1 text-sm text-muted-foreground font-light leading-[1.72] font-body">
+                  <p className="mb-4 flex-1 text-sm text-muted-foreground font-light leading-[1.72]">
                     {product.description}
                   </p>
                   <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <span className="text-sm text-primary font-body">{product.availability}</span>
+                    <span className="text-sm text-primary">{product.availability}</span>
                     <a
                       href={createWhatsAppLink(whatsappMessages.product(product.name))}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="subtle-link-cta text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold font-body"
+                      className="subtle-link-cta text-[10px] tracking-widest uppercase border-b border-primary pb-1 text-foreground hover-gold"
                     >
                       Consultar
                     </a>

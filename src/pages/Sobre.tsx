@@ -47,11 +47,11 @@ const Sobre = () => {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-5 text-center sm:px-6">
           <ScrollReveal>
-            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block font-body">
+            <span className="text-xs tracking-[0.5em] text-primary uppercase mb-4 block">
               Nossa Essência
             </span>
             <h1 className="mb-8 text-3xl text-foreground sm:text-4xl md:text-7xl">Sobre a FADARY</h1>
-            <p className="max-w-2xl mx-auto text-sm text-muted-foreground font-light leading-[1.82] font-body sm:text-base">
+            <p className="max-w-2xl mx-auto text-sm text-muted-foreground font-light leading-[1.82] sm:text-base">
               FADARY nasce de um olhar delicado sobre beleza, feminilidade e autocuidado. Uma
               marca em construção, pensada para acompanhar a mulher com leveza, presença e
               bem-estar.
@@ -79,7 +79,7 @@ const Sobre = () => {
           <ScrollReveal delay={0.2}>
             <div>
               <h2 className="mb-8 text-3xl text-foreground md:text-[2.2rem]">O Significado de FADARY</h2>
-              <div className="space-y-6 text-muted-foreground font-light leading-[1.82] font-body">
+              <div className="space-y-6 text-muted-foreground font-light leading-[1.82]">
                 <p>
                   O nome FADARY traduz delicadeza, feminilidade e beleza natural. Ele inspira uma
                   marca que valoriza o cuidado com a mulher de forma leve, elegante e próxima.
@@ -106,7 +106,7 @@ const Sobre = () => {
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl mb-8 text-foreground">Nossa Visão</h2>
             <div className="w-12 h-[1px] bg-primary mx-auto mb-12" />
-            <p className="text-base text-muted-foreground font-light leading-[1.82] italic font-body sm:text-lg md:text-xl">
+            <p className="text-base text-muted-foreground font-light leading-[1.82] italic sm:text-lg md:text-xl">
               "Construir uma marca feminina de beleza e autocuidado em que cada detalhe transmita
               delicadeza, presença e bem-estar, valorizando a beleza natural no dia a dia."
             </p>
@@ -131,7 +131,7 @@ const Sobre = () => {
                     0{i + 1}.
                   </span>
                   <h3 className="text-xl mb-4 text-foreground">{v.title}</h3>
-                  <p className="text-muted-foreground font-light leading-[1.78] font-body">
+                  <p className="text-muted-foreground font-light leading-[1.78]">
                     {v.description}
                   </p>
                 </div>

@@ -74,7 +74,7 @@ const Index = () => {
           className="relative z-20 mx-auto max-w-5xl px-5 text-center sm:px-6"
         >
           <motion.div variants={heroItem}>
-            <span className="mb-4 block text-[10px] tracking-[0.35em] text-primary uppercase font-body sm:text-xs sm:tracking-[0.5em]">
+            <span className="mb-4 block text-[10px] tracking-[0.35em] text-primary uppercase sm:text-xs sm:tracking-[0.5em]">
               Beleza, Cuidado e Presença
             </span>
             <h1 className="text-[3.1rem] leading-none font-display text-foreground sm:text-6xl md:text-8xl">
@@ -85,11 +85,11 @@ const Index = () => {
             variants={heroItem}
             className="mx-auto mt-12 max-w-[28rem] px-1 sm:mt-16 sm:max-w-[32rem] sm:px-2 md:mt-20 md:max-w-[36rem]"
           >
-            <p className="text-[0.9rem] text-foreground/80 font-light italic leading-[1.75] tracking-[0.01em] font-body sm:text-base sm:leading-[1.85] md:text-[1.05rem]">
+            <p className="text-[0.9rem] text-foreground/80 font-light italic leading-[1.75] tracking-[0.01em] sm:text-base sm:leading-[1.85] md:text-[1.05rem]">
               <span className="block">Seu brilho não vem apenas do que se vê,</span>
               <span className="block">mas do que você sente.</span>
             </p>
-            <p className="mt-5 text-[1.35rem] font-semibold leading-tight font-body gold-gradient-text sm:mt-6 sm:text-[1.7rem] md:text-[1.95rem]">
+            <p className="mt-5 text-[1.35rem] font-semibold leading-tight gold-gradient-text sm:mt-6 sm:text-[1.7rem] md:text-[1.95rem]">
               Acredite na sua própria magia.
             </p>
           </motion.div>
@@ -105,7 +105,7 @@ const Index = () => {
             </Link>
             <Link
               to={APP_PATHS.contact}
-              className="subtle-link-cta flex min-h-[3rem] w-full max-w-sm items-center justify-center gap-2 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold font-body sm:w-auto sm:px-8"
+              className="subtle-link-cta flex min-h-[3rem] w-full max-w-sm items-center justify-center gap-2 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold sm:w-auto sm:px-8"
             >
               Falar com a FADARY <ArrowRight className="w-4 h-4" />
             </Link>
@@ -135,7 +135,7 @@ const Index = () => {
           <ScrollReveal delay={0.2}>
             <div>
               <h2 className="mb-8 text-3xl text-foreground md:text-[2.2rem]">Nossa Essência</h2>
-              <div className="space-y-6 text-muted-foreground font-light leading-[1.82] font-body">
+              <div className="space-y-6 text-muted-foreground font-light leading-[1.82]">
                 <p>
                   A FADARY acredita em uma beleza que faz parte da rotina da mulher com leveza e
                   intenção. Para nós, autocuidado é um gesto diário de bem-estar, presença e
@@ -153,7 +153,7 @@ const Index = () => {
                     <span className="block text-primary text-xl mb-2 italic font-display">
                       0{i + 1}.
                     </span>
-                    <span className="text-[10px] uppercase tracking-widest text-foreground font-body">
+                    <span className="text-[10px] uppercase tracking-widest text-foreground">
                       {value}
                     </span>
                   </div>
@@ -170,16 +170,16 @@ const Index = () => {
           <ScrollReveal>
             <div className="panel-premium flex flex-col items-center gap-10 border border-border/20 bg-surface p-6 sm:gap-12 sm:p-8 md:flex-row md:gap-16 md:p-20">
               <div className="flex-1 order-2 md:order-1">
-                <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block font-body">
+                <span className="text-primary text-xs tracking-[0.3em] uppercase mb-4 block">
                   Curadoria FADARY
                 </span>
                 <h2 className="mb-6 text-4xl text-foreground md:text-6xl">Seleção em Destaque</h2>
-                <p className="mb-8 text-muted-foreground font-light leading-[1.82] font-body">
+                <p className="mb-8 text-muted-foreground font-light leading-[1.82]">
                   Uma seleção pensada para acompanhar a rotina de beleza com leveza, cuidado e
                   feminilidade. Cada referência é escolhida para inspirar momentos de autocuidado
                   e tornar o dia a dia mais bonito e agradável.
                 </p>
-                <div className="mb-10 text-lg font-light italic text-foreground font-body md:text-2xl">
+                <div className="mb-10 text-lg font-light italic text-foreground md:text-2xl">
                   Novas seleções chegam aos poucos, sempre com disponibilidade sob consulta.
                 </div>
                 <Link
@@ -222,10 +222,10 @@ const Index = () => {
             {testimonials.map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className="text-center">
-                  <p className="mb-6 text-lg font-light italic leading-relaxed text-foreground font-body sm:text-xl md:text-2xl">
+                  <p className="mb-6 text-lg font-light italic leading-relaxed text-foreground sm:text-xl md:text-2xl">
                     "{t.text}"
                   </p>
-                  <span className="text-xs tracking-[0.3em] uppercase text-primary font-body">
+                  <span className="text-xs tracking-[0.3em] uppercase text-primary">
                     {t.author}
                   </span>
                 </div>
@@ -240,7 +240,7 @@ const Index = () => {
         <ScrollReveal>
           <div className="max-w-3xl mx-auto px-5 text-center sm:px-6">
             <h2 className="mb-8 text-3xl text-foreground md:text-5xl">Conheça a FADARY</h2>
-            <p className="mb-12 text-muted-foreground font-light leading-[1.82] font-body">
+            <p className="mb-12 text-muted-foreground font-light leading-[1.82]">
               Estamos construindo uma marca pensada para acompanhar sua rotina de autocuidado com
               leveza, beleza natural e um olhar acolhedor para o bem-estar feminino. Fale conosco
               e conheça mais de perto a essência da FADARY.
@@ -258,7 +258,7 @@ const Index = () => {
                 href={CONTACTS.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="subtle-link-cta flex min-h-[3rem] w-full items-center justify-center gap-2 border border-border/30 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold font-body sm:w-auto sm:px-8"
+                className="subtle-link-cta flex min-h-[3rem] w-full items-center justify-center gap-2 border border-border/30 px-6 py-3 text-[10px] tracking-[0.2em] uppercase text-foreground hover-gold sm:w-auto sm:px-8"
               >
                 Acompanhar no Instagram
               </a>
