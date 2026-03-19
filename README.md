@@ -1,77 +1,102 @@
-# Fadary Beauty
+# Fadary Beauty Showcase
 
-Projeto de website desenvolvido como projeto pessoal para praticar desenvolvimento web, organização visual de marca e construção de uma interface moderna e responsiva.
+Site institucional de apresentação de marca, desenvolvido como projeto de portfólio com foco em design sofisticado, identidade visual consistente e boas práticas de desenvolvimento front-end.
 
-O site foi criado com base na ideia de uma marca de beleza inspirada no contexto da marca da minha mãe, mas este projeto **não possui finalidade comercial real**. Ele foi desenvolvido principalmente para estudo, portfólio e prática de desenvolvimento front-end.
+**Deploy:** [fadary-beauty-showcase.vercel.app](https://fadary-beauty-showcase.vercel.app)
 
-## Objetivo do projeto
+---
 
-O principal objetivo deste projeto foi colocar em prática conhecimentos de desenvolvimento web por meio da criação de um site visualmente atraente, com estrutura próxima de um projeto real.
+## Sobre o projeto
 
-Com ele, busquei treinar:
+O Fadary Beauty Showcase simula a presença digital de uma marca de beleza e autocuidado feminino. O objetivo foi construir uma interface com nível de acabamento próximo ao de um projeto profissional real — com animações, responsividade, acessibilidade e testes automatizados.
 
-- construção de interfaces modernas
-- organização de páginas e componentes
-- responsividade
-- identidade visual de marca
-- experiência do usuário em um site de catálogo/apresentação
+O projeto foi criado para fins de portfólio e estudo, sem operação comercial ativa.
 
-Além disso, o projeto também serve como uma demonstração prática da minha capacidade de desenvolver um site desse nível para uma marca real.
+---
 
-## Contexto
+## Páginas
 
-Este foi um projeto pessoal desenvolvido em aproximadamente **1 semana**, em um ritmo calmo, com foco em aprendizado, experimentação e refinamento visual.
+| Rota | Descrição |
+|------|-----------|
+| `/` | Hero, seção de destaque da curadoria e valores da marca |
+| `/sobre` | História, missão e valores da FADARY |
+| `/produtos` | Produto em destaque e grade de curadoria |
+| `/contato` | Canais de contato: WhatsApp, Instagram e e-mail |
 
-A proposta foi simular um cenário próximo ao de um cliente real, criando uma presença digital para uma marca fictícia/inspirada em uma marca real, mas sem objetivo de venda ou operação comercial.
+---
 
-## Tecnologias utilizadas
+## Tecnologias
 
-Pelo que foi utilizado no projeto, as principais tecnologias/ferramentas foram:
+- **React 18** + **TypeScript**
+- **Vite** — bundler e servidor de desenvolvimento
+- **Tailwind CSS** — estilização por classes utilitárias
+- **React Router v6** — roteamento client-side
+- **Framer Motion** — animações declarativas
+- **Vitest** + **Testing Library** — testes automatizados
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- Framer Motion
+---
 
-## Funcionalidades atuais
+## Como executar localmente
 
-O projeto conta atualmente com elementos como:
+**Pré-requisitos:** Node.js 18+
 
-- página inicial com identidade visual da marca
-- catálogo/apresentação de produtos
-- layout responsivo
-- navegação entre seções
-- foco visual em branding e apresentação
-- estrutura moderna para futura publicação online
+```bash
+# Clone o repositório
+git clone https://github.com/pedrozo/fadary-beauty-showcase.git
+cd fadary-beauty-showcase
 
-## Status do projeto
+# Instale as dependências
+npm install
 
-O projeto ainda **não está finalizado** e segue em fase de refinamento.
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
 
-Atualmente, ele já representa bem a proposta visual e técnica que eu queria construir, mas ainda receberá ajustes e melhorias antes de ser considerado uma versão final.
+Acesse `http://localhost:5173`.
 
-## Observações
+### Scripts disponíveis
 
-- Este projeto foi desenvolvido para fins de estudo e portfólio
-- A marca e o site foram usados como base de simulação de um projeto real
-- Os produtos exibidos não representam, necessariamente, uma operação comercial ativa
-- O foco principal foi praticar desenvolvimento web e apresentar minhas habilidades na construção de interfaces
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run preview` | Prévia do build localmente |
+| `npm test` | Executa os testes |
+| `npm run lint` | Análise estática com ESLint |
 
-## Aprendizados
+---
 
-Durante o desenvolvimento deste projeto, pratiquei principalmente:
+## Testes
 
-- estruturação de um projeto front-end
-- criação de interfaces com foco visual
-- uso de React com TypeScript
-- organização de componentes e seções
-- adaptação do site para diferentes tamanhos de tela
-- construção de um projeto com cara de portfólio real
+Testes automatizados com Vitest + Testing Library, cobrindo:
+
+- Renderização correta de cada rota
+- Integridade dos links de navegação internos
+- Validade dos links externos de contato (WhatsApp, Instagram, e-mail)
+- Comportamento do menu mobile (abertura, fechamento e acessibilidade)
+
+```bash
+npm test
+```
+
+---
+
+## Estrutura do projeto
+
+```
+src/
+├── assets/          # Imagens e recursos estáticos
+├── components/      # Navbar, Footer, ScrollReveal, SiteToaster
+├── config/          # Rotas centralizadas (navigation.ts)
+├── lib/             # Links de contato centralizados (contact.ts)
+├── pages/           # Index, Sobre, Produtos, Contato, NotFound
+└── test/            # Testes de navegação e links
+```
+
+---
 
 ## Autor
 
-Desenvolvido por **Lorenzo Garcia Pedrozo**.
+**Lorenzo Garcia Pedrozo** — Estudante de Engenharia de Software
 
-Estudante de Engenharia de Software, com foco em aprendizagem prática e desenvolvimento de projetos para portfólio.
+[LinkedIn](https://linkedin.com/in/lorenzo-pedrozo) · [GitHub](https://github.com/pedrozo)
