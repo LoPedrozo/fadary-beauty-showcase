@@ -14,7 +14,7 @@ const ScrollReveal = ({ children, className = "", delay = 0 }: ScrollRevealProps
     <motion.div
       initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-70px" }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{
         duration: shouldReduceMotion ? 0.01 : 0.58,
         delay,
